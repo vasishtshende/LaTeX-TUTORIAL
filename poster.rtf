@@ -1,0 +1,152 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\\documentclass[a0,final]\{a0poster\}\par
+%%%Load packages\par
+\\usepackage\{multicol\} \tab\tab\tab %3-column layout\par
+\\usepackage[left=3cm,right=3cm,bottom=0cm,top=0cm]\{geometry\}\tab\tab\tab %Reset margins\par
+\\usepackage\{helvet\}\tab\tab\tab\tab %Load Helvetica font & CM math\par
+\\usepackage\{color\}\tab\tab\tab\tab %Needed for colour boxes & coloured text\par
+\\usepackage\{graphics\}\par
+%%%Define colours and lengths\par
+\\definecolor\{headingcol\}\{rgb\}\{0.5,0.7,1\}\tab\tab\tab %Colour of main title\par
+\\definecolor\{boxcol\}\{rgb\}\{0.7,0.2,0.2\}\tab\tab %Edge-colour of box and top banner\par
+\\fboxsep=1cm\tab\tab\tab\tab\tab\tab\tab %Padding between box and text\par
+\\setlength\{\\columnsep\}\{3cm\}\tab\tab\tab\tab %Set spacing between columns\par
+\\renewcommand\{\\familydefault\}\{\\sfdefault\}\tab %Set main text to sans-serif\par
+\par
+%%%Format title\par
+\\makeatletter\tab\tab\tab\tab\tab\tab\tab %Needed to include code in main file\par
+\\renewcommand\\@maketitle\{%\par
+\\null\tab\tab\tab\tab\tab\tab\tab\tab\tab %Sets position marker\par
+\{\par
+\\color\{headingcol\}\\sffamily\\VERYHuge\tab\tab %Set title font and colour\par
+\\@title \\par\}%\par
+\\vskip 0.6em%\par
+\{\par
+\\color\{white\}\\sffamily\\LARGE\tab\tab\tab\tab %Set author font and colour\par
+\\lineskip .5em%\par
+\\begin\{tabular\}[t]\{l\}%\par
+\\@author\par
+\\end\{tabular\}\\par\}%\par
+\\vskip 1cm\par
+\\par\par
+\}\par
+\\makeatother\par
+\par
+\\title\{Making A0 scientific posters easily with \\LaTeX\}\par
+\par
+\\author\{Author A \\& Author B\\\\\par
+University College London\}\par
+\par
+\\begin\{document\}\par
+\\hspace\{-4cm\}\tab\tab\tab\tab\tab\tab\tab\tab %Align with edge of page, not margin\par
+\\vspace\{-1cm\}\par
+\\includegraphics\{Black_Landscape.pdf\}\par
+\par
+%\\colorbox\{boxcol\}\{\tab\tab\tab\tab\tab\tab\tab %Coloured banner across top\par
+\\begin\{minipage\}\{1191mm\}\tab\tab\tab\tab\tab %Minipage for title contents\par
+\\vspace\{-20cm\}\par
+\\maketitle\par
+\\end\{minipage\}\par
+%\}\par
+\\vspace\{1cm\}\par
+\par
+\\begin\{multicols\}\{3\}\tab\tab\tab\tab\tab\tab\tab %Use 3-column layout\par
+\\raggedcolumns\tab\tab\tab\tab\tab\tab\tab %Don't stretch contents vertically\par
+\par
+%%%Column1\par
+\\section*\{Introduction\}\par
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut dui. Vivamus ullamcorper. Pellentesque metus dui, facilisis nec, aliquet ut, ultrices quis, ipsum. Mauris semper venenatis nunc. Nunc et leo. Morbi quis tortor quis ipsum rhoncus faucibus. Praesent nunc. Aliquam justo. Nullam vitae leo. Nam imperdiet scelerisque orci.\\\\\par
+\\\\\par
+Donec quis urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vel ante a tortor sollicitudin elementum. Duis tortor est, tincidunt non, dapibus sed, tincidunt in, elit. Sed auctor. Sed libero augue, sollicitudin ut, vehicula quis, feugiat feugiat, risus. Phasellus lobortis. Cras ut tellus sit amet neque porta convallis. Quisque ut mi. Cras elit nunc, ultrices in, tempus sit amet, semper in, purus.\\\\\par
+\\\\\par
+Vivamus interdum erat non massa. Nullam condimentum metus sed dui. Nam gravida risus eu dui. Donec quis risus sit amet elit semper imperdiet. Aliquam ut pede nec orci pharetra ultrices. Integer sed velit quis tellus sollicitudin commodo. Phasellus scelerisque tellus ut justo. Vivamus condimentum leo quis lectus. Aliquam sem massa, tincidunt ac, venenatis at, pulvinar vulputate, lectus. Nulla sit amet libero. Nullam fermentum nunc et sapien luctus lobortis. Aenean lectus purus, porta at, tincidunt in, aliquam vel, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum quis velit. Nam tincidunt nisi sed erat. Sed vel enim eu lectus mattis convallis. In vulputate tincidunt erat. Ut nec ligula id tellus aliquam aliquam. In lectus erat, malesuada sed, dignissim a, gravida sit amet, justo. Donec nulla.\par
+\par
+\par
+\\section*\{Method\}\par
+Sift the flour and salt into a large mixing bowl with a sieve held high above the bowl so the flour gets a airing. Now make a well in the centre of the flour and break the eggs into it. Then begin whisking the eggs - any sort of whisk or even a fork will do - incorporating any bits of flour from around the edge of the bowl as you do so.\\\\\par
+\\\\\par
+Next gradually add small quantities of the milk and water mixture, still whisking (don't worry about any lumps as they will eventually disappear as you whisk). When all the liquid has been added, use a rubber spatula to scrape any elusive bits of flour from around the edge into the centre, then whisk once more until the batter is smooth, with the consistency of thin cream. Now melt the 50g/2oz of butter in a pan. Spoon 2 tbsp of it into the batter and whisk it in, then pour the rest into a bowl anduse it to lubricate the pan, using a wodge of kitchen paper to smear it round before you make each pancake.\\\\\par
+\\\\\par
+Now get the pan really hot, then turn the heat down to medium and, to start with, do a test pancake to see if you're using the correct amount of batter. I find 2 tbsp is about right for an 18cm/7in pan. It's also helpful if you spoon the batter into a ladle so it can be poured into the hot pan in one go. As soon as the batter hits the hot pan, tip it around from side to side to get the base evenly coated with batter. It should take only half a minute or so to cook; you can lift the edge with a palette knife to see if it's tinged gold as it should be. Flip the pancake over with a pan slice or palette knife - the other side will need a few seconds only - then simply slide it out of the pan onto a plate.\par
+Stack the pancakes as you make them between sheets of greaseproof paper on a plate fitted over simmering water, to keep them warm while you make the rest.\\\\\par
+\\\\\par
+To serve, spinkle each pancake with freshly squeezed lemon juice and caster sugar, fold in half, then in half again to form triangles, or else simply roll them up. Serve sprinkled with a little more sugar and lemon juice and extra sections of lemon.\par
+\par
+\\columnbreak\par
+\par
+%%%Column 2\par
+\\section*\{Maths\}\par
+Malthusian growth model:\par
+$$P(t) = P_0 e^\{rt\}$$\par
+Verhulst equation:\par
+$$P(t) = \\frac\{K P_0 e^\{rt\}\}\{K + P_0 (e^\{rt\} - 1)\}$$\par
+Lotka-Volterra equations:\par
+$$\\frac\{dx\}\{dt\} = x(\\alpha - \\beta y)$$\par
+$$\\frac\{dy\}\{dt\} = - y(\\gamma - \\delta x)$$\par
+Michaelis-Menten:\par
+$$\\frac\{d[P]\}\{dt\} = V_\{max\} \\frac\{[S]\}\{K_m + [S]\}$$\par
+\par
+\par
+\\section*\{Lists and tables\}\par
+Itemize:\par
+\\begin\{itemize\}\par
+\\item Item 1\par
+\\item Item 2\par
+\\item Item 3\par
+\\end\{itemize\}\par
+\\null\par
+Description:\par
+\\begin\{description\}\par
+\\item[Domain] Eukaryota\par
+\\item[Kingdom] Animalia\par
+\\item[Phylum] Chordata\par
+\\item[Class] Mammalia\par
+\\item[Order] Primates\par
+\\item[Family] Hominidae\par
+\\item[Genus] \\emph\{Homo\}\par
+\\item[Species] \\emph\{H. Sapiens\}\par
+\\end\{description\}\par
+\\null\par
+Five-day forecast:\par
+\\begin\{center\}\par
+\\begin\{tabular\}\{lccccc\}\par
+Day & Summary & Max day & Min night & Wind (mph) & Visibility\\\\\par
+\\hline\par
+Saturday & Sun/cloud & 16 & 10 & 6 & poor\\\\\par
+Sunday & Rain & 14 & 7 & 3 & poor\\\\\par
+Monday & Showers & 13 & 6 & 21 & poor\\\\\par
+Tuesday & Sun & 15 & 9 & 7 & good\\\\\par
+Wednesday & Showers & 17 & 12 & 6 &moderate\par
+\\end\{tabular\}\par
+\\end\{center\}\par
+\par
+\par
+\\columnbreak\par
+\par
+%%%Column 3\par
+\\section*\{Discussion\}\par
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut dui. Vivamus ullamcorper. Pellentesque metus dui, facilisis nec, aliquet ut, ultrices quis, ipsum. Mauris semper venenatis nunc. Nunc et leo. Morbi quis tortor quis ipsum rhoncus faucibus. Praesent nunc. Aliquam justo. Nullam vitae leo. Nam imperdiet scelerisque orci.\\\\\par
+\\\\\par
+Donec quis urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vel ante a tortor sollicitudin elementum. Duis tortor est, tincidunt non, dapibus sed, tincidunt in, elit. Sed auctor. Sed libero augue, sollicitudin ut, vehicula quis, feugiat feugiat, risus. Phasellus lobortis. Cras ut tellus sit amet neque porta convallis. Quisque ut mi. Cras elit nunc, ultrices in, tempus sit amet, semper in, purus.\\\\\par
+\\\\\par
+Vivamus interdum erat non massa. Nullam condimentum metus sed dui. Nam gravida risus eu dui. Donec quis risus sit amet elit semper imperdiet. Aliquam ut pede nec orci pharetra ultrices. Integer sed velit quis tellus sollicitudin commodo. Phasellus scelerisque tellus ut justo. Vivamus condimentum leo quis lectus. Aliquam sem massa, tincidunt ac, venenatis at, pulvinar vulputate, lectus. Nulla sit amet libero. Nullam fermentum nunc et sapien luctus lobortis. Aenean lectus purus, porta at, tincidunt in, aliquam vel, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum quis velit. Nam tincidunt nisi sed erat. Sed vel enim eu lectus mattis convallis. In vulputate tincidunt erat. Ut nec ligula id tellus aliquam aliquam. In lectus erat, malesuada sed, dignissim a, gravida sit amet, justo. Donec nulla.\\\\\par
+\\\\\par
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut dui. Vivamus ullamcorper. Pellentesque metus dui, facilisis nec, aliquet ut, ultrices quis, ipsum. Mauris semper venenatis nunc. Nunc et leo. Morbi quis tortor quis ipsum rhoncus faucibus. Praesent nunc. Aliquam justo. Nullam vitae leo. Nam imperdiet scelerisque orci.\\\\\par
+\\\\\par
+Donec quis urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer vel ante a tortor sollicitudin elementum. Duis tortor est, tincidunt non, dapibus sed, tincidunt in, elit. Sed auctor. Sed libero augue, sollicitudin ut, vehicula quis, feugiat feugiat, risus. Phasellus lobortis. Cras ut tellus sit amet neque porta convallis. Quisque ut mi. Cras elit nunc, ultrices in, tempus sit amet, semper in, purus.\\\\\par
+\\\\\par
+Vivamus interdum erat non massa. Nullam condimentum metus sed dui. Nam gravida risus eu dui. Donec quis risus sit amet elit semper imperdiet. Aliquam ut pede nec orci pharetra ultrices. Integer sed velit quis tellus sollicitudin commodo. Phasellus scelerisque tellus ut justo. Vivamus condimentum leo quis lectus. Aliquam sem massa, tincidunt ac, venenatis at, pulvinar vulputate, lectus. Nulla sit amet libero. Nullam fermentum nunc et sapien luctus lobortis. Aenean lectus purus, porta at, tincidunt in, aliquam vel, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum quis velit. Nam tincidunt nisi sed erat. Sed vel enim eu lectus mattis convallis. In vulputate tincidunt erat. Ut nec ligula id tellus aliquam aliquam. In lectus erat, malesuada sed, dignissim a, gravida sit amet, justo. Donec nulla.\\\\\par
+\\\\\par
+Vivamus interdum erat non massa. Nullam condimentum metus sed dui. Nam gravida risus eu dui. Donec quis risus sit amet elit semper imperdiet. Aliquam ut pede nec orci pharetra ultrices. Integer sed velit quis tellus sollicitudin commodo. Phasellus scelerisque tellus ut justo. Vivamus condimentum leo quis lectus. Aliquam sem massa, tincidunt ac, venenatis at, pulvinar vulputate, lectus. Nulla sit amet libero. Nullam fermentum nunc et sapien luctus lobortis. Aenean lectus purus, porta at, tincidunt in, aliquam vel, nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum quis velit. Nam tincidunt nisi sed erat. Sed vel enim eu lectus mattis convallis. In vulputate tincidunt erat. Ut nec ligula id tellus aliquam aliquam. In lectus erat, malesuada sed, dignissim a, gravida sit amet, justo. Donec nulla.\par
+\par
+\par
+\\nocite*\par
+\par
+%\\bibliographystyle\{plain\}\par
+%\\bibliography\{halobib\}\par
+\par
+\\end\{multicols\}\par
+\\end\{document\}\par
+}
+ 

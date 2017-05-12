@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Beginning with LaTeX</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li class="active"><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1> <font color="red">Typesetting Math</font></h1>
+<h3><strong>Overview of basic math features.</strong></h3><br/>
+
+<p align="justify"><font face="verdana" size="3"> 
+<ol>
+<li>Inline math</li>
+<li>Equations</li>
+<li>Fractions</li>
+<li>Matrices</li>
+<li>Scaling of Parentheses, Brackets etc.</li>
+</ol>
+There are two major modes of typesetting math in LaTeX one is embedding the math
+ directly into your text by encapsulating your formula in dollar signs and the other 
+ is using a predefined math environment. You can follow along and try the code in the 
+ sandbox below. I also prepared a quick reference of math symbols.</font></p>
+	 
+<h3>Using inline math - embed formulas in your text</h3>
+<p align="justify"><font face="verdana" size="3">
+To make use of the inline math feature, simply write your text and if you need to
+ typeset a single math symbol or formula, surround it with dollar signs:
+</font></p>
+
+ <div class="console">
+<p><font face="courier"><font color="red">...</font><br/>
+This formula $f(x) = x^2$ is an example.<br/>
+<font color="red">...</font><br/>
+ </font>
+</p>
+</div>
+<p align="justify"> <font face="verdana" size="3"><strong>Output equation : </font> </strong><img src="math1.png" width="" height=""></p>
+<h3>The equation and align environment</h3>
+<p align="justify">
+<font face="verdana" size="3">The most useful math envorinments are the equation environment for typesetting single equationsand the
+ align environment for multiple equations and automatic alignment:</font></p>
+<p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\begin{</font>{document}</br>
+   <font color="red">\begin</font>{equation*}</br>
+   1 + 2 = 3 <br/>
+   <font color="red">\end</font>{equation*}</br>
+   <font color="red">\begin</font>{equation*}</br>
+   1 = 3 - 2 <br/>
+   <font color="red">\end</font>{equation*}</br>
+   <font color="red">\begin</font>{align*}</br>
+    1 + 2 &= 3\\<br/>
+    1 &= 3 - 2<br/>
+   <font color="red">\end</font>{align*}</br>
+   <font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+
+<p align="justify">
+<font face="verdana" size="3"><strong>Output Equation : </strong><br/>1 + 2 = 3<br/>1 = 3 − 2 <br/><br/>
+<strong>Output Align : </strong><br/>1 + 2 = 3 <br/>&nbsp &nbsp &nbsp 1 = 3 − 2<br/>
+</font></p>
+<p align="justify">
+<font face="verdana" size="3">The align environment will align the equations at the ampersand &. Single equations have to beseperated 
+by a linebreak \\. There is no alignment when using the simple equation environment. Furthermore it is not even possible to enter two 
+equations in that environment, it will result in acompilation error. The asterisk (e.g. equation*) only indicates, that I don't want
+ the equations to be numbered.
+</font></p>
+<h3>Fractions and more</h3>
+<p align="justify">
+<font face="verdana" size="3">
+LaTeX is capable of displaying any mathematical notation. It's possible to typeset integrals, fractions and more.
+ Every command has a specific syntax to use. I will demonstrate some of the most common LaTeX math features:
+ </font></p>
+ 
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\usepackage</font>{amsmaths}}}}</br>
+   <font color="red">\begin{</font>{document}</br>
+   <font color="red">\begin</font>{align*}</br>
+   f(x) &= x^2<br/>
+   g(x) &= <font color="red">\frac</font>{1}{x}<br/>
+   F(x) &= <font color="red">\int</font>^a_b <font color="red">\frac</font>{1}{3}x^3<br/>
+   <font color="red">\end</font>{align*}</br>
+   <font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3"><strong>Output : </strong><br/><img src="math2.png" width="" height=""> <br/><br/>
+It is also possible to combine various commands to create more sophisticated expressions such as:
+</font></p>
+<div class="console">
+<p><font face="courier">
+<font color="red">\frac</font>{1}{<font color="red">\sqrt</font>{x}}
+   </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3"><strong>Output :</strong><img src="math3.png" width="" height=""> <br/><br/>
+The more complex the expression, the more error prone this is, it's important to take care of opening and closing the braces {}.
+ It can take a long time to debug such errors. The Lyx program offers a great formula editor, which can ease this work a bit. 
+ Personally, I write all code by hand though, since it's faster than messing around with the formula editor.
+   </font>
+</p>
+
+<h3>Matrices</h3>
+<p align="justify">
+<font face="verdana" size="3">Furthermore it's possible to display matrices in LaTeX. 
+There is a special matrix environment for this purpose, please keep in mind that the matrices only work within math environments as describedabove:
+</font>
+</p>
+<div class="console">
+<p><font face="courier">
+<font color="red">\begin</font>{matrix}<br/>
+1 & 0//<br/>
+0 & 1<br/>
+<font color="red">\end</font>{matrix}
+   </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3"><strong>Output :</strong>  <img src="math4.png" width="" height=""> 
+</font>
+</p> 
+<h3>Brackets in math mode - Scaling</h3>
+<p align="justify">
+<font face="verdana" size="3">To surround the matrix by brackets, it's necessary to use special statements, 
+because the plain [ ] symbols do not scale as the matrix grows. The following code will result in wrong brackets:
+</font>
+</p> 
+<div class="console">
+<p><font face="courier">
+<font color="red">\begin</font>{matrix}<br/>
+1 & 0//<br/>
+0 & 1<br/>
+<font color="red">\end</font>{matrix}
+   </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3"><strong>Output :</strong><img src="math5.png" width="" height="">  <br/><br/>To scale them up, we must use the following code:
+</font>
+</p> 
+<div class="console">
+<p><font face="courier">
+<font color="red">\left</font>[<br/>
+<font color="red">\begin</font>{matrix}<br/>
+1 & 0//<br/>
+0 & 1<br/>
+<font color="red">\end</font>{matrix}<br/>
+<font color="red">\right</font>]
+   </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3"><strong>Output :</strong><img src="math6.png" width="" height=""> <br/><br/>This does also work for parentheses and braces and is not 
+limited to matrices. It can be used to scale for fractions and other expressions as well:
+</font>
+</p> 
+
+<div class="console">
+<p><font face="courier"><font color="red">\left</font>(<font color="red">\frac</font>{1}{<font color="red">\sqrt</font>{x}}<font color="red">\right</font>)
+  </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3"><strong>Output :</strong> <img src="math3.png" width="" height=""> 
+</font>
+</p> 
+
+</div>
+</body>
+</html>

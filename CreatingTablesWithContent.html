@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li class="active"><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Generate a table of contents in LaTeX</font></h1>
+
+
+<p align="justify"><font face="verdana" size="3"> Generating a <i>table of contents</i> can be done with a few simple commands. 
+                                                  LaTeX will use the section headings to create the <i>table of contents</i> and there are 
+												  commands to create a list of figures and a <i>list of tables</i> as well. I will give a small
+												  example code to create a <i>table of contents</i> first:
+	               </font> 
+</p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\begin</font>{document}</br>
+   <font color="red">\tableofcontents</font><br/>
+   <font color="red">\newpage</font><br/>
+   <font color="red">\section</font>{Section}<br/>
+   <font color="red">Dummy text</font><br/>
+   <font color="red">\subsection</font>{Subsection}<br/>
+   <font color="red">Dummy text</font><br/>
+   <font color="red">\end</font>{document}<br/>
+   </font>
+</p>
+</div>
+
+<p align="justify"> <font face="verdana" size="3">After compiling the .tex file two times, you will get the following table of contents:</font></p>
+<img src="CreatingTables.jpg" width="489" height="88">
+<br/>
+<p align="justify">
+<font face="verdana" size="3">The generation of a list of figures and tables works the same way. I added a dummy figure and table and put 
+                             the lists in the appendix of my document
+</font>
+</p>
+<br/>
+<div class="console">
+<p>
+<font face="courier">
+<font color="red">\begin</font>{document}<br/>
+<font color="red">...</font><br/>
+<font color="red">\begin</font>{figure}<br/>
+<font color="red">\caption</font>{Dummy figure}<br/>
+<font color="red">\end</font>{figure}<br/>
+<font color="red">\begin</font>{table}<br/>
+<font color="red">\caption</font>{Dummy table}<br/>
+<font color="red">\end</font>{table}<br/>
+<font color="red">...</font><br/>
+<font color="red">\begin</font>{appendix}<br/>
+<font color="red">\listoffigures</font><br/>
+<font color="red">\listoftables</font><br/>
+<font color="red">\end</font>{appendix}<br/>
+<font color="red">\end</font>{document}<br/>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3">After compiling two times again, the lists will be generated like this:
+</font>
+</p>
+<img src="CreatingTables2.jpg" width="485" height="152">
+</div>
+</body>
+</html>

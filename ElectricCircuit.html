@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li class="active"><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Circuit diagrams in LaTeX </font></h1>
+<h3><strong>Using Circuitikz</strong></h3><br/>
+
+<p align="justify">
+<font face="verdana" size="3">While Tikz offers many features and packages to create diagrams and all sorts of other drawings,
+                              it unfortunately lacks a good package to layout electric circuits. Using the package <i>circuitikz</i> we can easily solve
+							  this problem. It extends provides a new environment <i>circuitikz</i> in which we can easily draw our circuits in no time. 
+							  The syntax is exactly the same as shown in the previous lesson, so we can directly start with a simple code example:
+</font> 
+</p>
+
+
+
+<div class="console">
+<p>
+<font face="courier">
+<font color="red">\documentclass</font>{article}
+<font color="red">\usepackage</font>{tikz}
+<font color="red">\usepackage</font>{circuitikz}
+<font color="red">\begin</font>{document}
+<font color="red">\begin</font>{figure}[h!]
+<font color="red">  \begin</font>{center}
+<font color="red">    \begin</font>{circuitikz}
+<font color="red">\draw</font> (0,0)
+to[V,v=$U_q$] (0,2) % The voltage source
+to[short] (2,2)
+to[R=$R_1$] (2,0) % The resistor
+to[short] (0,0);
+<font color="red">\end</font>{circuitikz}
+<font color="red">\caption</font>{My first circuit.}
+<font color="red">\end</font>{center}
+<font color="red">\end</font>{figure}
+<font color="red">\end</font>{document}
+</font>
+</p>
+</div>
+
+
+
+<p align="justify">
+<font face="verdana" size="3">This will create the following circuit diagram in our document:
+</font> 
+</p>
+
+<img src="ElectricCircuit.jpg" width="192" height="148">
+<br/><br/>
+
+<p>
+<font face="verdana" size="3">The circuit will be drawn in the same way as a path in tikz, but we specify special options for the elements:
+</font> 
+<br/>
+</p>
+
+
+
+<div class="console">
+<p>
+<font face="courier">
+<font color="red">\draw </font> (0,0)<br/>
+      to[V,v=$U_q$] (0,2) % The voltage source<br/>
+</font>
+</p>
+</div>
+
+
+<p align="justify">
+<font face="verdana" size="3">Starting at (0,0) we will draw a voltage source specifying the [V,v=UqUq] options to the coordinates (0,2), 
+                              where V chooses the symbol for a voltage source and the v=UqUq draws the voltage arrow next to it. 
+							  Then we proceed to the resistor:
+</font> 
+</p>
+
+<br/>
+<div class="console">
+<p>
+   <font face="courier">
+     to[short] (2,2)<br/>
+     to[R=<font color="red">$ </font> R_1<font color="red"> $ </font>] (2,0) % The resistor<br/>
+   </font>
+</p>
+</div>
+<br/>
+
+<p align="justify">
+<font face="verdana" size="3">
+We first must draw a short circuit from (0,2) to (2,2) and then put the resistor symbol on the path from (2,2) to (2,0) note that this time the label 
+of the element must be specified directly (R=<h3>R1</h3>).
+<br/><br/>
+A list of all available elements for circuits is available in the circuitikz manual.
+<br/><br/>
+But how can we add more elements to the circuit? Let's say we want to add an inductor parallel to the Resistor. The easiest way is to add a new 
+draw command like this:<br/><br/>
+</font> 
+</p>
+<br/>
+<div class="console">
+<p>
+   <font face="courier">
+   <font color="red">\begin</font>{circuitikz}
+   <font color="red">\draw</font> (0,0)
+      to[V,v= <font color="red"> $ </font> U_q <font color="red"> $ </font>] (0,2) % The voltage source
+      to[short] (2,2)
+      to[R=<font color="red"> $ </font> R_1 <font color="red"> $ </font> ] (2,0) % The resistor
+      to[short] (0,0);
+      <font color="red">\draw </font>(2,2)
+      to[short] (4,2)
+      to[L=<font color="red"> $ </font> L_1 <font color="red"> $ </font>] (4,0)
+      to[short] (2,0);
+   <font color="red">\end</font>{circuitikz}
+   </font>
+</p>
+</div>
+<br/>
+
+
+<p align="justify">
+<font face="verdana" size="3">
+After compilation we'd get the following circuit diagram:
+</font> 
+</p>
+<img src="ElectricCircuit2.jpg" width="234" height="131">
+
+
+<p align="justify">
+<font face="verdana" size="3">
+Adding a capacitor next to it, is just as simple:
+</font> 
+</p>
+
+<div class="console">
+<p>
+   <font face="courier">
+   <font color="red">\begin</font>{circuitikz}
+      <font color="red">\draw </font>(0,0)
+      to[V,v=<font color="red"> $ </font>U_q <font color="red"> $</font>] (0,2) % The voltage source
+      to[short] (2,2)
+      to[R=<font color="red"> $ </font> R_1 <font color="red"> $ </font>] (2,0) % The resistor
+      to[short] (0,0);
+      <font color="red">\draw </font>(2,2)
+      to[short] (4,2)
+      to[L=<font color="red"> $ </font>L_1 <font color="red">$ </font>] (4,0)
+      to[short] (2,0);
+      <font color="red">\draw </font>(4,2)
+      to[short] (6,2)
+      to[C=<font color="red"> $ </font> C_1 <font color="red"> $ </font>] (6,0)
+      to[short] (4,0);
+   <font color="red">\end </font>{circuitikz}
+   </font>
+</p>
+</div>
+<br/>
+<p align="justify">
+<font face="verdana" size="3">
+This would give us the following diagram:
+</font> 
+</p>
+<br/>
+<img src="ElectricCircuit3.jpg" width="317" height="173">
+<br/><br/>
+
+<p align="justify">
+<font face="verdana" size="3">
+The circuitikz manual provides examples of all symbols and functions and can also be used for further reference. I've also written a follow-up 
+in lesson 14 which covers explains some more useful features and more components.
+</font> 
+</p>
+
+
+</div>
+</body>
+</html>

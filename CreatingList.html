@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Beginning with LaTeX</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li class="active"><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1> <font color="red">Lists in LaTeX</font></h1>
+
+<p align="justify"><font face="verdana" size="3"> List are basic elements in a document,
+ when used correctly they keep concepts organized and structured. This article explains how to create and modify numbered and unnumbered lists in LATEX.<br/><br/>
+ Lists are actually very simple to create.
+	</font> 
+</p>
+
+<div class="console">
+<p><font face="courier">
+	List are really easy to create<br/>
+	<font color="red">\begin</font>{itemize}<br/>
+   <font color="red">\item</font> One entry in the list</br>
+   <font color="red">\item</font> Another entry in the list<br/>
+  <font color="red">\end</font>{itemize}</font>
+</p>
+</div><br/>
+
+<h4>
+<strong>Output : </strong><br/>
+List are really easy to create<br/>
+<ul>
+<li>One entry in the list</li>
+<li> Another entry in the list</li>
+</ul>
+</h4>
+
+<p align="justify"> <font face="verdana" size="3">To create a (unordered) list you have to declare the itemize environment 
+and then put the entries inside.</font>
+</p>
+<h3>Unordered lists</h3>
+<p align="justify">
+<font face="verdana" size="3">The unordered (unnumbered) lists are produced by the itemize environment. Each entry must
+ be preceded by the control sequence \item.</font></p>
+<p>
+
+<div class="console">
+<p><font face="courier">
+	<font color="red">\begin</font>{itemize}<br/>
+   <font color="red">\item</font> The individual entries are indicated with a black dot, a so-called bullet.</br>
+   <font color="red">\item</font>The text in the entries may be of any length.<br/>
+  <font color="red">\end</font>{itemize}</font>
+</p>
+</div>
+<h4><strong>Output :</strong><br/>
+<ul>
+<li> The individual entries are indicated with a black dot, a so-called bullet.</li>
+<li>The text in the entries may be of any length.</li>
+</ul>
+</h4>
+
+<h3>Ordered lists</h3>
+
+<p align="justify">
+<font face="verdana" size="3">Ordered list have the same syntax inside a different environment :</font></p>
+<div class="console">
+<p><font face="courier">
+	<font color="red">\begin</font>{enumerate}<br/>
+   <font color="red">\item</font> The labels consists of sequential numbers.</br>
+   <font color="red">\item</font>The numbers starts at 1 with every call to the enumerate environment.<br/>
+  <font color="red">\end</font>{enumerate}</font>
+</p>
+</div>
+<h4><strong>Output : </strong><br/>
+<ol>
+<li>The labels consists of sequential numbers.</li>
+<li>The numbers starts at 1 with every call to the enumerate environment.</li>
+</ol>
+</h4>
+
+<h3>Nested lists</h3>
+
+<p align="justify">
+<font face="verdana" size="3">In LATEX you can insert a list inside another list.
+ The above lists may be included within one another, either mixed or of one type, to a depth of four levels.</font></p>
+<div class="console">
+<p><font face="courier">
+	<font color="red">\begin</font>{enumerate}<br/>
+	<font color="red">\begin</font>{itemize}<br/>
+   <font color="red">\item</font> The individual entries are indicated with a black dot, a so-called bullet.</br>
+   <font color="red">\item</font>The text in the entries may be of any length.<br/>
+  <font color="red">\end</font>{itemize}<br/>
+  <font color="red">\end</font>{enumerate}
+</p></font>
+</div>
+<h4><strong>Output : </strong><br/>
+<ol>
+<li>The labels consists of sequential numbers.</li>
+<ul>
+<li> The individual entries are indicated with a black dot, a so-called bullet.</li>
+<li>The text in the entries may be of any length.</li>
+</ul>
+<li>The numbers starts at 1 with every call to the enumerate environment.</li>
+</ol>
+</h4>
+
+<h3>List style</h3>
+
+<p align="justify">
+<font face="verdana" size="3">As many other LATEX elements, unordered and ordered list styles can be personalized.</font></p>
+<h4>Ordered List</h4>
+<div class="console">
+<p><font face="courier">
+<font color="red">\begin</font>{enumerate}<br/>
+&nbsp <font color="red">\item</font>First level item.</br>
+&nbsp <font color="red">\item</font>First level item.</br>
+&nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp <font color="red">\item</font>Second level item.</br>
+&nbsp &nbsp  <font color="red">\item</font>Second level item.</br>
+&nbsp &nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp <font color="red">\item</font>Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\item</font>Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\item</font>Fourth level item.</br>
+&nbsp &nbsp &nbsp &nbsp  <font color="red">\item</font>Fourthlevel item.</br>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\end</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp <font color="red">\end</font>{enumerate}<br/>
+&nbsp &nbsp <font color="red">\end</font>{enumerate}><br/>
+<font color="red">\end</font>{enumerate}</font><br/>
+</p>
+</div>
+<h4><strong>Output : </strong><br/>
+<ol>
+<li>First level item.</li>
+<li>First level item.</li>
+&nbsp (a) Second level item.<br/>
+&nbsp (b) Second level item.<br/>
+<ol>
+&nbsp &nbsp i. Third level item.<br/>
+&nbsp &nbsp ii. Third level item.<br/>
+<ol>
+&nbsp &nbsp &nbsp A. Third level item.<br/>
+&nbsp &nbsp &nbsp B. Third level item.<br/>
+
+</ol></ol></ol>
+</h4>
+
+<p align="justify">
+<font face="verdana" size="3">
+The default numbering scheme is:
+<ul>
+<li>Arabic number (1, 2, 3, ...) for Level 1</li>
+<li>Lowercase letter (a, b, c, ...) for Level 2</li>
+<li>Lowercase Roman numeral (i, ii, iii, ...) for Level 3</li>
+<li>Uppercase letter (A, B, C, ...) for Level 4.</li>
+</ul>
+These numbers can be changed by redefining the commands that typeset the numbers of various list levels. For example:
+</font></p>
+
+<div class="console">
+<p><font face="courier">
+<font color="red">\renewcommand</font>{<font color="red">\labelenumii</font>}{<font color="red">\Roman</font>{enumii}}
+<font color="red">\begin</font>{enumerate}<br/>
+&nbsp <font color="red">\item</font>First level item.</br>
+&nbsp <font color="red">\item</font>First level item.</br>
+&nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp <font color="red">\item</font>Second level item.</br>
+&nbsp &nbsp  <font color="red">\item</font>Second level item.</br>
+&nbsp &nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp <font color="red">\item</font>Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\item</font>Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\item</font>Fourth level item.</br>
+&nbsp &nbsp &nbsp &nbsp  <font color="red">\item</font>Fourthlevel item.</br>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\end</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp <font color="red">\end</font>{enumerate}<br/>
+&nbsp &nbsp <font color="red">\end</font>{enumerate}><br/>
+<font color="red">\end</font>{enumerate}</font><br/>
+</p>
+</div>
+
+<h4><strong>Output : </strong><br/>
+<ol>
+<li>First level item.</li>
+<li>First level item.</li>
+&nbsp  I Second level item.<br/>
+&nbsp II Second level item.<br/>
+<ol>
+&nbsp &nbsp i. Third level item.<br/>
+&nbsp &nbsp ii. Third level item.<br/>
+<ol>
+&nbsp &nbsp &nbsp A. Third level item.<br/>
+&nbsp &nbsp &nbsp B. Third level item.<br/>
+
+</ol></ol></ol>
+</h4>
+
+<p align="justify">
+<font face="verdana" size="3">The command <i>\renewcommand{\labelenumii}{\Roman{enumii}} </i>changes the second level 
+to upper case Roman numeral. It is possible to change the labels of any level, replace labelenumii for one of the listed below.
+<ul>
+<li><i>\theenumi </i>for Level 1</li>
+<li><i>\theenumii </i>for Level 2</li>
+<li><i>\theenumiii </i>for Level 3</li>
+<li><i>\theenumiv </i>for Level 4</li>
+</ul>The command must be placed in the preamble to change the labels globally or right before\begin{enumerate} to change labels only in this list.
+ There are some other styles, see the reference guidefor a complete list.
+In numbered lists the counter is incremented by \item before it is printed, and starts from 1,a,i,A,I. This can be changed:
+
+</font></p>
+
+
+<div class="console">
+<p><font face="courier">
+<font color="red">\renewcommand</font>{<font color="red">\labelenumii</font>}{<font color="red">\Roman</font>{enumii}}
+<font color="red">\begin</font>{enumerate}<br/>
+&nbsp <font color="red">\item</font> First level item.</br>
+&nbsp <font color="red">\item</font> First level item.</br>
+&nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp <font color="red">\setcounter</font>{enumii}{4}<br/>
+&nbsp &nbsp <font color="red">\item</font> Second level item.</br>
+&nbsp &nbsp  <font color="red">\item</font> Second level item.</br>
+&nbsp &nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp <font color="red">\item</font> Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\item</font> Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\begin</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\item</font> Fourth level item.</br>
+&nbsp &nbsp &nbsp &nbsp  <font color="red">\item</font> Fourth level item.</br>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\end</font>{enumerate}<br/>
+&nbsp &nbsp &nbsp <font color="red">\end</font>{enumerate}<br/>
+&nbsp &nbsp <font color="red">\end</font>{enumerate}><br/>
+<font color="red">\end</font>{enumerate}</font><br/>
+</p>
+</div>
+
+<h4><strong>Output : </strong><br/>
+<ol>
+<li>&nsbp First level item.</li>
+<li>&nsbp First level item.</li>
+V Second level item.<br/>
+VI Second level item.<br/>
+<ol>
+i. Third level item.<br/>
+ii. Third level item.<br/>
+<ol>
+A. Fourth level item.<br/>
+B. Fourth level item.<br/>
+
+</ol></ol></ol>
+</h4>
+
+
+<p align="justify">
+<font face="verdana" size="3">To change the start number or letter you must use the \setcounter command. 
+In the example, to change the start number of level 2 to V the command <i>\setcounter{enumii}{4}</i> was used.
+To set the start number to any other counter change enumii for any of these:
+
+<ul>
+<li><i>enumi </i>for Level 1</li>
+<li><i>enumii </i>for Level 2</li>
+<li><i>enumiii </i>for Level 3</li>
+<li><i>enumiv </i>for Level 4</li>
+</ul>
+
+</font></p>
+<h4>Unordered List</h4>
+<p align="justify">
+<font face="verdana" size="3">The label scheme of unordered lists also changes depending on the depth of the nested list:
+</font></p>
+mbers can be changed by redefining the commands that typeset the numbers of various list levels. For example:
+</font></p>
+
+<div class="console">
+<p><font face="courier">
+<font color="red">\renewcommand</font>{<font color="red">\labelenumii</font>}{<font color="red">\Roman</font>{enumii}}
+<font color="red">\begin</font>{itemize}<br/>
+&nbsp <font color="red">\item</font> First level item.</br>
+&nbsp <font color="red">\begin</font>{itemize}<br/>
+&nbsp &nbsp  <font color="red">\item</font> Second level item.</br>
+&nbsp &nbsp <font color="red">\begin</font>{itemize}<br/>
+&nbsp &nbsp &nbsp <font color="red">\item</font> Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\begin</font>{itemize}<br/>
+&nbsp &nbsp &nbsp &nbsp  <font color="red">\item</font> Fourth level item.</br>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\end</font>{itemize}<br/>
+&nbsp &nbsp &nbsp <font color="red">\end</font>{itemize}<br/>
+&nbsp &nbsp <font color="red">\end</font>{itemize}><br/>
+<font color="red">\end</font>{itemize}</font><br/>
+</p>
+</div>
+
+<h4><strong>Output : </strong><br/>
+<ul>
+<li>First level item.</li>
+&nbsp - Second level item.<br/>
+<ol>
+* Third level item.<br/>
+<ol>
+. Fourth level item.<br/>
+
+</ol></ol></ul>
+</h4>
+
+<p align="justify">
+<font face="verdana" size="3">The default label scheme for itemized lists is:
+<ul>
+<li>Level 1 is <i>\textbullet (•)</i></li>
+<li>Level 2 is <i>\textendash (–)</i></li>
+<li>Level 3 is <i>\textasteriskcentered (*)</i></li>
+<li>Level 4 is <i>\textperiodcentered (•).</i></li>
+</ul>
+</font></p>
+
+<p align="justify">
+<font face="verdana" size="3">These labels can be changed by redefining the commands that typeset them for various list levels. 
+For example, to change Level 1 to black square and Level 2 to white square we'll use :
+</font></p>
+
+
+<div class="console">
+<p><font face="courier">
+<font color="red">\renewcommand</font>{<font color="red">\labelenumii</font>}{$<font color="red">\blacksquare</font>$}<br/>
+<font color="red">\renewcommand</font>{<font color="red">\labelenumii</font>}{$<font color="red">\square</font>$}
+
+<font color="red">\begin</font>{itemize}<br/>
+&nbsp <font color="red">\item</font> First level item.</br>
+&nbsp <font color="red">\begin</font>{itemize}<br/>
+&nbsp &nbsp  <font color="red">\item</font> Second level item.</br>
+&nbsp &nbsp <font color="red">\begin</font>{itemize}<br/>
+&nbsp &nbsp &nbsp <font color="red">\item</font> Third level item.</br>
+&nbsp &nbsp &nbsp <font color="red">\begin</font>{itemize}<br/>
+&nbsp &nbsp &nbsp &nbsp  <font color="red">\item</font> Fourth level item.</br>
+&nbsp &nbsp &nbsp &nbsp <font color="red">\end</font>{itemize}<br/>
+&nbsp &nbsp &nbsp <font color="red">\end</font>{itemize}<br/>
+&nbsp &nbsp <font color="red">\end</font>{itemize}><br/>
+<font color="red">\end</font>{itemize}</font><br/>
+</p>
+</div>
+
+<h4><strong>Output : </strong><br/>
+<ul>
+<li>[]First level item.</li>
+&nbsp ()Second level item.<br/>
+<ol>
+* Third level item.<br/>
+<ol>
+. Fourth level item.<br/>
+
+</ol></ol></ul>
+</h4>
+<p align="justify">
+<font face="verdana" size="3">The mathematical symbols used in the previous example belong to the amssymb package,
+ so you have to add<i> \usepackage{amssymb}</i> to your preamble.
+To redefine the label use one of the next commands, depending on the level of list mark you intend to change:
+
+
+<ul>
+<li><i>labelitemi </i>for Level 1</li>
+<li><i>labelitemii </i>for Level 2</li>
+<li><i>labelitemiii </i>for Level 3</li>
+<li><i>labelitemiv </i>for Level 4</li>
+</ul>
+You can also change the item label for a specific entry, for example:
+</font></p>
+
+
+<div class="console">
+<p><font face="courier">
+	List are really easy to create<br/>
+	<font color="red">\begin</font>{itemize}<br/>
+   <font color="red">\item</font> Default item label for entry one</br>
+   <font color="red">\item</font> Default item label for entry two<br/>
+   <font color="red">\item</font>[$<font color="red">\square</font>$]  Custom item label for entry three<br/>
+  <font color="red">\end</font>{itemize}</font>
+</p>
+</div><br/>
+<h4><strong>Output : </strong><br/>
+<ol>
+<li> Default item label for entry one</li>
+<li> Default item label for entry two</li></ol>
+&nbsp &#x2589; Custom item label for entry three
+
+
+</h4>
+<p align="justify">
+<font face="verdana" size="3">All you have to do is pass the desired mark as a parameter inside brackets to the item line.</font></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li class="active"><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Bibliography in LaTeX with Bibtex/Biblatex</font></h1><br/>
+
+<p align="justify">
+<font face="verdana" size="3"> We have looked at many features of LaTeX so far and learned that many things are automated by LaTeX
+                               There are functions to add a table of contents, lists of tables and figures and also several packages 
+							   that allow us to generate a bibliography. I will describe how to use bibtex and biblatex (both external 
+		        			   programs) to create the bibliography. At first we have to create a .bib file, which contains our 
+							   bibliographic information. first:
+</font> 
+</p>
+
+<h3>Creating a .bib file</h3>
+
+<p align="justify">
+<font face="verdana" size="3">A .bib file will contain the bibliographic information of our document. I will only give a simple
+                              example, since there are many tools to generate the entries automatically. I will not explain the 
+						      structure of the file itself, since i suggest using a bibtex generator (choose one from google).
+						      Our example will contain a single book and look like this:
+
+</font> 
+</p>
+
+
+<div class="console">
+<p>
+   <font face="courier">
+   <font color="red">@BOOK</font>{DUMMY:1,<br/>
+   AUTHOR="John Doe",<br/>
+   TITLE="The Book without Title",<br/>
+   PUBLISHER="Dummy Publisher",<br/>
+   YEAR="2100",<br/>
+   }
+   </font>
+</p>
+</div>
+
+<h3>Using BibTeX</h3>
+<p align="justify"> 
+<font face="verdana" size="3">After creating the bibtex file, we have to tell LaTeX where to find our bibliographic database.
+                              For BibTeX this is not much different from printing the table of contents. We just need the 
+						      commands <i>\bibliography</i> which tells LaTeX the location of our <i>.bib </i>file and <i>\bibliographystyle</i> 
+						      which selects one of various bibliographic styles.
+</font>
+</p>
+
+
+<div class="console">
+<p>
+<font face="courier">
+<font color="red">\documentclass</font>{article}<br/>
+<font color="red">\begin</font>{document}<br/>
+<font color="red">Random citation \cite</font>{DUMMY:1} embeddeed in text.<br/>
+<font color="red">\newpage</font><br/>
+<font color="red">\bibliography</font>{lesson7a1}<br/> 
+<font color="red">\bibliographystyle</font>{ieeetr}<br/>
+<font color="red">\end</font>{document}<br/>
+</font>
+</p>
+</div>
+
+<p align="justify">
+<font face="verdana" size="3">By using this code, we will obtain something like this:</font>
+</p>
+<img src="AddingBibliography.jpg" width="374" height="122">
+<br/><br/>
+<p align="justify">
+<font face="verdana" size="3">I named my .bib file lesson7a1.bib, note that I did not enter the .bib extension. For the style, I've choosen the 
+                              ieeetr style, which is very common for my subject, but there are many more styles available. Which will change the
+							  way our references look like. The ieeetr style will mark citations with successive numbers such as [1] in this example. 
+							  If I choose the style to apalike instead, i will get the following result:
+</font>
+</p>
+<img src="AddingBibliography2.jpg" width="464" height="121">
+<br/></br>
+
+<p align="justify">
+<font face="verdana" size="3">If you use a different editor, it can be necessary to execute the bibtex command manually. In a command prompt/shell simply run:
+</font>
+</p>
+
+
+<div class="console">
+<p>
+<font face="courier">
+pdflatex lesson7a1.tex<br/>
+bibtex lesson7a1<br/>
+pdflatex lesson7a1.tex<br/>
+pdflatex lesson7a1.tex<br/>
+</p>
+</div>
+
+<p align="justify">
+<font face="verdana" size="3">It is necessary to execute the pdflatex command, before the bibtex command, to tell bibtex what literature we 
+                              cited in our paper. Afterwards the .bib file will be translated into the proper output for out references section.
+							  The next two steps merge the reference section with our LaTeX document and then assign successive numbers in the last step.
+</font>
+</p>
+<h3><font face="verdana" >Autogenerate footnotes in LaTeX using BibLaTeX</font></h3>
+<p align="justify">
+<font face="verdana" size="3">The abilities of BibTeX are limited to basic styles as depicted in the examples shown above. Sometimes it is necessary to
+                              cite all literature in footnotes and maintaining all of them by hand can be a frustrating task. At this point BibLaTeX kicks
+							  in and does the work for us. The syntax varies a bit from the first document. We now have to include the biblatex package and
+							  use the <i>\autocite</i> and <i>\printbibliography </i>command. It is crucial to move the <i>\bibliography{lesson7a1}</i> statement to the preamble of 
+							  our document:
+</font>
+</p>
+<div class="console">
+<p>
+<font face="courier">
+<font color="red">\documentclass</font>{article}<br/>
+<font color="red">\usepackage[backend=bibtex,style=verbose-trad2]</font>{biblatex}<br/>
+<font color="red">\bibliography</font>{lesson7a1} <br/>
+<font color="red">\begin</font>{document}<br/>
+<font color="red">Random citation \autocite[1]</font>{DUMMY:1} embeddeed in text.<br/>
+<font color="red">\newpage</font><br/>
+<font color="red">\printbibliography</font><br/>
+<font color="red">\end</font>{document}<br/>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3">
+                             The \autocite command generates the footnotes and we can enter a page number in the brackets <i>\autocite[1]{DUMMY:1}</i> 
+							 will generate a footnote like this:
+</font>
+</p>
+<br/>
+<img src="AddingBibliography3.jpg" width="375" height="44">
+<br/><br/>
+<p align="justify">
+<font face="verdana" size="3">
+                             For BibLaTeX we have to choose the citation style on package inclusion with <i> \usepackage[backend=bibtex,style=verbose-trad2]
+							 {biblatex}</i> the <i>backend=bibtex</i> part makes sure to use BibTeX instead of Biber as our backend, since Biber <i>fails </i>to 
+							 work in some editors like TeXworks. It took me a while to figure out how to generate footnotes automatically, because 
+							 the sources I found on the internet, didn't mention this at all.
+</font>
+</p>
+</div>
+</body>
+</html>

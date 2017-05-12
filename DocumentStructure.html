@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Beginning with LaTeX</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li class="active"><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Document Structure</font></h1>
+<h3><strong>Adding paragraphs and sections</strong></h3><br/>
+
+<p align="justify"><font face="verdana" size="3"> We have created a very basic document in the previous lesson, but when writing a paper, 
+it's necessary to structure the content into logic units. To achieve this, LaTeX offers us commands to generate section headings and number 
+them automatically. The commands to create section headings are straightforward:
+	</font> 
+</p>
+<div class="console">
+<p><font face="courier"><font color="red">\section</font>{}<br/>
+&nbsp <font color="red">\subsection</font>{}<br/>
+&nbsp &nbsp <font color="red">\subsubsection</font>{}<br/><br/>
+<font color="red">\paragraph</font>{}<br/>
+<font color="red">\subparagraph</font>{}<br/>
+   </font>
+</p>
+</div>
+
+<p align="justify"> <font face="verdana" size="3">Example output for section and subsection<br/>The section commands are numbered and will appear in 
+the table of contents of your document.Paragraphs aren't numbered and won't show in the table of contents. Here an example output using sections:</font>
+</p>
+<h2>1  Section<br/></h2><h3>&nbsp &nbsp Hello World !<br/><br/></h3><h2>1.1  Subsection<br/></h2><h3>&nbsp &nbsp Structuring a document is easy!
+ 
+</h3><br/><br/>
+<p align="justify">
+<font face="verdana" size="3">In order to get this output, we just have to add a few lines to our program from lesson 1:</font></p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\title{</font>{my first document}</br>
+   <font color="red">\date</font>{today}</br>
+   <font color="red">\author</font>{my first document}</br></br>
+   <font color="red">\begin</font>{document}</br>
+   <font color="red">\pagenumbering</font>{gobble}</br>
+   <font color="red">\make</font>title</br>
+   <font color="red">\new</font>page</br>
+   <font color="red">\pagenumbering</font>{arabic}</br>
+   <font color="red">\section</font>{}<br/>
+     Hello World !</br>
+	<font color="red">\subsection</font>{}<br/>
+	Structuring LaTeX is easy!<br/>	
+   <font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+
+<p align="justify"> <font face="verdana" size="3"><h3>Hierarchy of all sectioning elements<br/></h3>
+The following picture shows the hierarchical structure of all elements:
+</font>
+</p>
+<h2>1  Section<br/></h2><h3>&nbsp &nbsp Hello World !<br/><br/></h3><h2>1.1  Subsection<br/></h2><h3>&nbsp &nbsp Structuring a document is easy!</h3><br/>
+<h2>1.1.1  Subsubsection<br/></h2><h3>&nbsp &nbsp More text<br/><br/>
+<strong>paragraph </strong> &nbsp Some more text<br/><br/>&nbsp &nbsp <strong>subparagraph</strong> &nbsp some more text </h3><br/>
+
+<p align="justify">
+<font face="verdana" size="3">I have used the following code to get this output:</font></p>
+<div class="console">
+<p><font face="courier">
+<font color="red">\documentclass</font>{article}<br/>
+<font color="red">\begin</font>{document}</br>
+<font color="red">\section</font>{section}<br/>
+&nbsp  Hello World !</br>
+<font color="red">\subsection</font>{subsection}<br/>
+&nbsp Structuring a document is easy!<br/>
+<font color="red">\subsubsection</font>{subsubsection}<br/>
+&nbsp more text<br/>
+<font color="red">\paragraph</font>{Paragraph}<br/>
+&nbsp Some more text<br/>
+<font color="red">\subparagraph</font>{subparagraph}<br/>
+&nbsp Even more text !<br/>
+<font color="red">\section</font>{Another section}<br/>
+<font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+<p align="justify">
+<font face="verdana" size="3">It's very easy to structure documents into sections using LaTeX. This feature also exists in Word, but most people don't use it properly. 
+In LaTeX it is very effortless to have consistent formatting throughout your paper. In the next lesson I will give a short introduction to
+ packages and show some basic math typesetting. This is where LaTeX really excels.
+</font></p>
+</div>
+</body>
+</html>

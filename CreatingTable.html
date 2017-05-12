@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li class="active"><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Tables in LaTeX </font></h1>
+<h3><strong>Quick Guide with Code Examples</strong></h3><br/>
+
+<p align="justify">
+<font face="verdana" size="3"> A lot of times, it is necessary to have data nicely structured in a table. LaTeX offers an environment for table creation.
+                               For this purpose we use the <i>table</i> and <i>tabular</i> as well as the <i>center environment</i>. The <i>table environment</i> merely holds 
+							   our other environments and allows to add a caption to our table. The actual data is contained in the<i> tabular environment</i>
+							   and we center the table on the page using the <i>center environment.</i>
+</font> 
+</p>
+<p align="justify">
+<font face="verdana" size="3">The table I use for demonstration look like this:
+</font> 
+</p>
+<img src="CreatingTable.jpg" width="202" height="60">
+<p align="justify">
+<font face="verdana" size="3">The according code contains <i>ampersands</i> & as <i>column seperators</i> and <i>newline symbols</i> \\ as row seperators. 
+                              The vertical lines are passed as an argument to the tabular environment <i>(e.g. \begin{tabular}{l|c||r} )</i> and 
+							  the letters tell whether we want to align the content to the left (l), to the center (c) or to the right (r)
+							  for each column. Row seperators can be added with the \hline command. The \caption and \label commands can be used 
+							  in the same way as for pictures.
+</font> 
+</p>
+
+
+<div class="console">
+<p>
+   <font face="courier">
+   <font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\begin</font>{document}<br/>
+   <font color="red">\begin</font>{table}[h!]<br/>
+   <font color="red">\centering</font><br/>
+   <font color="red">\caption</font>{Caption for the table.}<br/>
+   <font color="red">\label</font>{tab:table1}<br/>
+   <font color="red">\begin</font>{tabular}{l|c||r}<br/>
+   1 <font color="red"> & </font> 2 <font color="red"> & </font> 3\\<br/>
+   <font color="red">\hline</font><br/>
+   a <font color="red"> & </font> b <font color="red"> & </font> c\\<br/>
+   <font color="red">\end</font>{tabular}<br/>
+   <font color="red">\end</font>{table}<br/>
+   <font color="red">\end</font>{document}<br/>
+   </font>
+</p>
+</div>
+
+<p align="justify"> 
+<font face="verdana" size="3">There are two disadvantages of writing tables by hand as described in this tutorial. While it works for small tables
+                              similar to the one in our example, it can take a long time to enter a large amount of data by hand. Most of the
+							  time the data will be collected in form of a spreadsheet and we don't want to enter the data twice. Furthermore
+							  once put into LaTeX tables, the data can not be plotted anymore and is not in a useful form in general. For this 
+							  reason, I will show how to create tables and plots directly from spreadsheets (.csv) in the advanced lessons.
+                              <br/><br/>
+                              But let's stick with writing tables by hand for now. The table above does not look very appealing. For this reason, we're 
+							  now going to use the booktabs package to change this pitiful situation. The table we're going to get will be much nicer than
+							  before. Have a look at this:
+</font>
+</p>
+<br/>
+<img src="CreatingTable2.jpg" width="394" height="170">
+
+<p align="justify"> 
+<font face="verdana" size="3">
+The code requires just a few changes. I used the following code to get this result:
+</font>
+</p><br/>
+
+<div class="console">
+<p>
+<font face="courier">
+<font color="red">\documentclass</font>{article}<br/>
+<font color="red">\usepackage</font>{booktabs}<br/>
+<font color="red">\begin</font>{document}<br/>
+<font color="red">\begin</font>{table}[h!]<br/>
+<font color="red">\centering</font><br/>
+<font color="red"> \caption</font>{Caption for the table.}<br/>
+<font color="red">\label</font>{tab:table1}<br/>
+<font color="red">\begin</font>{tabular}{ccc}<br/>
+<font color="red"> \toprule</font><br/>
+Some <font color="red"> & </font> actual & </font> content\\<br/>
+<font color="red">\midrule</font><br/>
+prettifies <font color="red"> & </font> the <font color="red"> &  </font> content\\<br/>
+as <font color="red"> &  </font> well <font color="red"> & </font> as\\<br/>
+using <font color="red"> & </font> the <font color="red"> & </font> booktabs package\\<br/>
+<font color="red"> \bottomrule</font><br/>
+<font color="red"> \end</font>{tabular}<br/>
+<font color="red"> \end</font>{table}<br/>
+</font>
+</p>
+</div>
+
+<p align="justify">
+<font face="verdana" size="3">I suggest you to try out all the features of LaTeX tables yourself. There's a huge list of code examples for 
+                              tables somewhere on Wikibooks, which vast amount is almost overwhelming. As I mentioned before, it's usually faster 
+							  to use a tool like excel to format your content and then let the pgfplots package autogenerate a table for you.
+</font>
+</p>
+</div>
+</body>
+</html>

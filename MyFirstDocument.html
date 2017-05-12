@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Beginning with LaTeX</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li class="active"><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">My first LaTeX Document</font> </h1>
+<h3><strong>Adding a title page</strong></h3><br/>
+
+<p align="justify"><font face="verdana" size="3"> There are numerous choices for environments and you will most likely need them as soon as you introduce
+ large parts of mathematics or figures to your document. While it is possible to define your own environments, it is very likely that your desired environment
+ already exists. LaTeX already comes with a few predefined environments and even more come in so called packages, which are subject to another tutorial.<br/>
+Let's now try out a few more commands to make our document more interesting:
+
+	</font> 
+</p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\title{</font>{my first document}</br>
+   <font color="red">\date</font>{today}</br>
+   <font color="red">\author</font>{my first document}</br>
+   <font color="red">\begin</font>{document}</br>
+   <font color="red">\make</font>title</br>
+   <font color="red">\new</font>page</br>
+   Hello World !</br>
+   <font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+
+<p align="justify"> <font face="verdana" size="3">Obviously the statements \title, \date and \author are not within the the document environment,
+ so they will not directly show up in our document. The area before our main document is called <i>preamble</i>. In this specific example set up the values
+ for the \maketitle command for later use in our document. This command automatically creates a titlepage for us. The \newpage command speaks for itself.<br/><br/>
+If we now compile again, we will see a nicely formatted title page. But there is something wrong we can spot on a closer look at our document. 
+There is a page number on our title page, which is not very beautiful. We can remove it, by turning the page number off for our first page. 
+This can be done by adding the <i>\pagenumbering{gobble}</i> command and then changing it back to <i>\pagenumbering{arabic}</i> on the next page numbers like so:
+</font></p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\title{</font>{my first document}</br>
+   <font color="red">\date</font>{today}</br>
+   <font color="red">\author</font>{my first document}</br>
+   <font color="red">\begin</font>{document}</br>
+   <font color="red">\pagenumbering</font>{gobble}</br>
+   <font color="red">\make</font>title</br>
+   <font color="red">\new</font>page</br>
+   <font color="red">\pagenumbering</font>{arabic}</br>
+   Hello World !</br>
+   <font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+
+</div>
+</body>
+</html>

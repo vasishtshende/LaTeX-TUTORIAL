@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li class="active"><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Plots in LaTeX </font></h1>
+<h3><strong>Visualize data with pgfplots</strong></h3><br/>
+<p align="justify">
+<font face="verdana" size="3">Visualizing your data is easily done with auto-generated plots using the pgfplots package. It's strongly recommended
+                              to read Lesson 9 before, since I will omit some basic statements about .csv files and basically use the same file for my plot.
+                              <br/><br/>
+                              To plot our data, we will use the following code:
+</font> 
+</p>
+
+
+
+<div class="console">
+<p>
+   <font face="courier">
+   <font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\usepackage</font>{siunitx}<br/>
+   <font color="red">\usepackage</font>{tikz} % To generate the plot from csv<br/>
+   <font color="red">\usepackage</font>{pgfplots}<br/>
+   <font color="red">\pgfplotsset</font>{compat=newest} % Allows to place the legend below plot<br/>
+   <font color="red">\usepgfplotslibrary</font>{units} % Allows to enter the units nicely<br/>
+   <font color="red">\sisetup</font>{<br/>
+   round-mode          = places,<br/>
+   round-precision     = 2,<br/>
+   }<br/>
+   <font color="red">\begin</font>{document}<br/>
+   <font color="red">\begin</font>{figure}[h!]<br/>
+   <font color="red">\begin</font>{center}<br/>
+   <font color="red">\begin</font>{tikzpicture}<br/>
+   <font color="red">\begin</font>{axis}[<br/>
+   width=<font color="red">\linewidth</font>, % Scale the plot to \linewidth<br/>
+   grid=major, % Display a grid<br/>
+   grid style={dashed,gray!30}, % Set the style<br/>
+   xlabel=X Axis <font color="red">$ </font> U <font color="red"> $ </font>, % Set the labels<br/>
+   ylabel=Y Axis <font color="red">$ </font> I <font color="red"> $ </font> ,<br/>
+   x unit=<font color="red">\si</font>{<font color="red">\volt</font>}, % Set the respective units<br/>
+   y unit=<font color="red">\si</font>{<font color="red">\ampere</font>},<br/>
+   legend style={at={(0.5,-0.2)},anchor=north}, % Put the legend below the plot<br/>
+   x tick label style={rotate=90,anchor=east} % Display labels sideways<br/>
+   ]<br/>
+   <font color="red">\addplot</font> <br/>
+   % add a plot from table; you select the columns by using the actual name in<br/>
+   % the .csv file (on top)<br/>
+   table[x=column 1,y=column 2,col sep=comma] {table.csv}; <br/>
+   <font color="red">\legend</font>{Plot}<br/>
+   <font color="red">\end</font>{axis}<br/>
+   <font color="red">\end</font>{tikzpicture}<br/>
+   <font color="red">\caption</font>{My first autogenerated plot.}<br/>
+   <font color="red">\end</font>{center}<br/>
+   <font color="red">\end</font>{figure}<br/>
+   <font color="red">\end</font>{document}<br/>
+   </font>
+</p>
+</div>
+
+<p align="justify">
+<font face="verdana" size="3">This plot will show up in our .pdf file after compilation:
+</font> 
+</p>
+
+<img src="plots.jpg" width="517" height="500">
+<br/><br/>
+<font face="verdana" size="3">We added the new packages and the following code to generate the plot:
+</font> 
+<br/>
+</p>
+
+
+
+<div class="console">
+<p>
+   <font face="courier">
+   
+...<br/>
+<font color="red">\usepackage</font>{tikz}<br/>
+<font color="red">\usepackage</font>{pgfplots}<br/>
+...<br/>
+<font color="red">\pgfplotsset</font>{compat=newest}<br/>
+<font color="red">\usepgfplotslibrary</font>{units}<br/>
+...<br/>
+<font color="red">\begin</font>{figure}[h!]<br/>
+<font color="red">\begin</font>{center}<br/>
+<font color="red">\begin</font>{tikzpicture}<br/>
+<font color="red">\begin</font>{axis}[<br/>
+width=<font color="red">\linewidth</font>, % Scale the plot to \linewidth<br/>
+          grid=major, <br/>
+          grid style={dashed,gray!30},<br/>
+          xlabel=X Axis $U$, % Set the labels<br/>
+          ylabel=Y Axis $I$,<br/>
+          x unit=<font color="red">\si</font>{<font color="red">\</font>volt}, % Set the respective units<br/>
+          y unit=<font color="red">\si</font>{<font color="red">\</font>ampere},<br/>
+          legend style={at={(0.5,-0.2)},anchor=north},<br/>
+          x tick label style={rotate=90,anchor=east}<br/>
+          ]<br/>
+          <font color="red">\addplot </font><br/>
+          % add a plot from table; you select the columns by using the actual name in<br/>
+          % the .csv file (on top)<br/>
+          table[x=column 1,y=column 2,col sep=comma] {table.csv}; <br/>
+          <font color="red">\legend</font>{Plot}<br/>
+          <font color="red">\end</font>{axis}<br/>
+          <font color="red">\end</font>{tikzpicture}<br/>
+          <font color="red">\caption</font>{My first autogenerated plot.}<br/>
+          <font color="red">\end</font>{center}<br/>
+          <font color="red">\end</font>{figure}<br/>
+          ...<br/>
+   </font>
+</p>
+</div>
+
+
+<p align="justify">
+<font face="verdana" size="3">The first part only includes the necessary packages, the second part has only two commands as well, where
+                              \pgfplotsset{compat=newest} disables the backward compatibility for pgfplots, so we can place the legend of our 
+							  graph below the plot and \usepgfplotslibrary{units} adds two new commands (x unit and y unit), which allows for nice 
+							  formatting of units in brackets. Most parts from the last part should be self-explanatory. We have width, xlabel,
+							  ylabel and more. You should comment them out and explore them on your own.
+                              <br/><br/>
+                              The most important part is:
+</font> 
+</p>
+
+<br/>
+<div class="console">
+<p>
+   <font face="courier">
+   ...<br/>
+   table[x=column 1,y=column 2,col sep=comma] {table.csv};<br/>
+   ...<br/>
+   </font>
+</p>
+</div>
+<br/>
+
+<p align="justify">
+<font face="verdana" size="3">
+Given a .csv file like:
+</font> 
+</p>
+<br/>
+<div class="console">
+<p>
+   <font face="courier">
+   column 1,column 2
+   1,2
+   11.432,2342.23123123
+   </font>
+</p>
+</div>
+<br/>
+
+<p align="justify">
+<font face="verdana" size="3">
+we have to put the name of one column for our x, in this case x=column 1 and a second column for our y, since there are only two columns, 
+we choose y=column 2. Again, the col sep=comma indicates that we use comma as our column separator. We can copy the whole snippet as shown
+above and use it over and over again, we only have to change the columns we want to plot and the filename. There are a lot of options to style 
+the plots and have bar charts and so forth.
+</font> 
+</p>
+</div>
+</body>
+</html>

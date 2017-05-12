@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li class="active"><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red"> The basic layout of a LaTeX file </font> </h1><br/>
+
+<p align="justify"><font face="verdana" size="3"> Creating documents with LaTeX is simple and fun. In contrast to Word, you start off with a plain text file (.tex file)
+                                  which contains LaTeX code and the actual content. The control statements tell LaTeX how your content should be formatted.
+								  Before the settings become apparent, the .tex file has to be compiled (translated) into a .pdf file. A basic example document
+								  can be created with the following code: 
+	</font> 
+</p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\begin</font>{document}</br>
+   Hello World !</br>
+   <font color="red">\end</font>{document} <br/>
+   </font>
+</p>
+</div>
+
+<p align="justify"> <font face="verdana" size="3">Once you translated this code into a PDF document, you will find the text:</font>
+</p>
+<h2>Hello World!</h2>
+<p align="justify">
+<font face="verdana" size="3">along with the page number at the bottom, which is added automatically in the article class.<br/><br/>
+                              Let us now take a closer look on how this happens. As you can see, you will find a few statements beginning with a backslash 
+							  \ in the code box above. This tells LaTeX that this is not actual text, but an instruction or command. All commands share the 
+							  following structure: <i>\command{option}</i>. The first part indicates the name of the command and the second part in braces sets an
+							  option for this command. The options vary from command to command and you will learn some of them later on in this tutorial.<br/><br/>
+
+                              This example command shows, that LaTeX commands are most of the time self-explanatory: <i>\documentclass{article}</i>. This 
+							  line sets the document class to article. This influences the basic formatting of our document. If you're writing a book 
+							  (also available as a class), the layout has to be different from an article. In my tutorials, I will always use the class 
+							  <i>article</i>. Feel free to play around and try different document classes anyway!<br/><br/>
+
+                              The second line differs slightly from the first line, as this command involves a \begin and \end statement. In fact this is not 
+							  a command, but defines an environment. An environment is simply an area in which certain typesetting rules apply. It is possible
+							  (and usually necessary) to have multiple environments in a document, but it is imperative the <i>document environment</i> 
+							  is the topmost environment. The following code shows how environments can be used:
+							  </font></p>
+<div class="console">
+<p>
+
+<font face="courier">
+% Valid:<br/><br/>
+<font color="red">\begin</font>{document}<br/>
+  <font color="red">\begin</font>{environment1}<br/>
+    <font color="red">\begin</font>{environment2}<br/>
+    <font color="red">\end</font>{environment2}<br/>
+  <font color="red">\end</font>{environment1}<br/>
+<font color="red">\end</font>{document}<br/><br/>
+
+%Invalid:<br/><br/>
+
+<font color="red">\begin</font>{document}<br/>
+  <font color="red">\begin</font>{environment1}<br/>
+    <font color="red">\begin</font>{environment2}<br/>
+  <font color="red">\end</font>{environment1}<br/>
+    <font color="red">\end</font>{environment2}<br/>
+<font color="red">\end</font>{document}<br/><br/>
+
+% Invalid:<br/><br/>
+
+<font color="red">\begin</font>{document}<br/>
+  <font color="red">\begin</font>{environment1}<br/>
+<font color="red">\end</font>{document}<br/>
+  <font color="red">\end</font>{environment1}<br/><br/>
+
+% Also invalid:<br/><br/>
+
+<font color="red">\begin</font>{environment}<br/>
+  <font color="red">\begin</font>{document}<br/>
+  <font color="red">\end</font>{document}<br/>
+<font color="red">\end</font>{environment}<br/>
+</p>
+</div>
+
+</div>
+</body>
+</html>

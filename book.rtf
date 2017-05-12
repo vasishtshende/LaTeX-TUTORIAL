@@ -1,0 +1,285 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\par
+\\begin\{document\}\par
+\par
+\\title*\{Contribution Title\}\par
+% Use \\titlerunning\{Short Title\} for an abbreviated version of\par
+% your contribution title if the original one is too long\par
+\\author\{Name of First Author and Name of Second Author\}\par
+% Use \\authorrunning\{Short Title\} for an abbreviated version of\par
+% your contribution title if the original one is too long\par
+\\institute\{Name of First Author \\at Name, Address of Institute, \\email\{name@email.address\}\par
+\\and Name of Second Author \\at Name, Address of Institute \\email\{name@email.address\}\}\par
+%\par
+% Use the package "url.sty" to avoid\par
+% problems with special characters\par
+% used in your e-mail or web address\par
+%\par
+\\maketitle\par
+\par
+\\abstract*\{Each chapter should be preceded by an abstract (10--15 lines long) that summarizes the content. The abstract will appear \\textit\{online\} at \\url\{www.SpringerLink.com\} and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter. As a general rule the abstracts will not appear in the printed version of your book unless it is the style of your particular book or that of the series to which your book belongs.\par
+Please use the 'starred' version of the new Springer \\texttt\{abstract\} command for typesetting the text of the online abstracts (cf. source file of this chapter template \\texttt\{abstract\}) and include them with the source files of your manuscript. Use the plain \\texttt\{abstract\} command if the abstract is also to appear in the printed version of the book.\}\par
+\par
+\\abstract\{Each chapter should be preceded by an abstract (10--15 lines long) that summarizes the content. The abstract will appear \\textit\{online\} at \\url\{www.SpringerLink.com\} and be available with unrestricted access. This allows unregistered users to read the abstract as a teaser for the complete chapter. As a general rule the abstracts will not appear in the printed version of your book unless it is the style of your particular book or that of the series to which your book belongs.\\newline\\indent\par
+Please use the 'starred' version of the new Springer \\texttt\{abstract\} command for typesetting the text of the online abstracts (cf. source file of this chapter template \\texttt\{abstract\}) and include them with the source files of your manuscript. Use the plain \\texttt\{abstract\} command if the abstract is also to appear in the printed version of the book.\}\par
+\par
+\\section\{Section Heading\}\par
+\\label\{sec:1\}\par
+Use the template \\emph\{chapter.tex\} together with the Springer document class SVMono (monograph-type books) or SVMult (edited books) to style the various elements of your chapter content in the Springer layout.\par
+\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations. And please note that the first line of\par
+text that follows a heading is not indented, whereas the first lines of\par
+all subsequent paragraphs are.\par
+\par
+\\section\{Section Heading\}\par
+\\label\{sec:2\}\par
+% Always give a unique label\par
+% and use \\ref\{<label>\} for cross-references\par
+% and \\cite\{<label>\} for bibliographic references\par
+% use \\sectionmark\{\}\par
+% to alter or adjust the section heading in the running head\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations.\par
+\par
+Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+\par
+Use the standard \\verb|equation| environment to typeset your equations, e.g.\par
+%\par
+\\begin\{equation\}\par
+a \\times b = c\\;,\par
+\\end\{equation\}\par
+%\par
+however, for multiline equations we recommend to use the \\verb|eqnarray| environment\\footnote\{In physics texts please activate the class option \\texttt\{vecphys\} to depict your vectors in \\textbf\{\\itshape boldface-italic\} type - as is customary for a wide range of physical subjects\}.\par
+\\begin\{eqnarray\}\par
+a \\times b = c \\nonumber\\\\\par
+\\vec\{a\} \\cdot \\vec\{b\}=\\vec\{c\}\par
+\\label\{eq:01\}\par
+\\end\{eqnarray\}\par
+\par
+\\subsection\{Subsection Heading\}\par
+\\label\{subsec:2\}\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references\\index\{cross-references\} and citations\\index\{citations\}\par
+as has already been described in Sect.~\\ref\{sec:2\}.\par
+\par
+\\begin\{quotation\}\par
+Please do not use quotation marks when quoting texts! Simply use the \\verb|quotation| environment -- it will automatically render Springer's preferred layout.\par
+\\end\{quotation\}\par
+\par
+\par
+\\subsubsection\{Subsubsection Heading\}\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations as has already been described in\par
+Sect.~\\ref\{subsec:2\}, see also Fig.~\\ref\{fig:1\}\\footnote\{If you copy\par
+text passages, figures, or tables from other works, you must obtain\par
+\\textit\{permission\} from the copyright holder (usually the original\par
+publisher). Please enclose the signed permission with the manucript. The\par
+sources\\index\{permission to print\} must be acknowledged either in the\par
+captions, as footnotes or in a separate section of the book.\}\par
+\par
+Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+\par
+% For figures use\par
+%\par
+\\begin\{figure\}[b]\par
+\\sidecaption\par
+% Use the relevant command for your figure-insertion program\par
+% to insert the figure file.\par
+% For example, with the graphicx style use\par
+\\includegraphics[scale=.65]\{figure\}\par
+%\par
+% If no graphics program available, insert a blank space i.e. use\par
+%\\picplace\{5cm\}\{2cm\} % Give the correct figure height and width in cm\par
+%\par
+\\caption\{If the width of the figure is less than 7.8 cm use the \\texttt\{sidecapion\} command to flush the caption on the left side of the page. If the figure is positioned at the top of the page, align the sidecaption with the top of the figure -- to achieve this you simply need to use the optional argument \\texttt\{[t]\} with the \\texttt\{sidecaption\} command\}\par
+\\label\{fig:1\}       % Give a unique label\par
+\\end\{figure\}\par
+\par
+\par
+\\paragraph\{Paragraph Heading\} %\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations as has already been described in\par
+Sect.~\\ref\{sec:2\}.\par
+\par
+Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+\par
+For typesetting numbered lists we recommend to use the \\verb|enumerate| environment -- it will automatically render Springer's preferred layout.\par
+\par
+\\begin\{enumerate\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\begin\{enumerate\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\end\{enumerate\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\end\{enumerate\}\par
+\par
+\par
+\\subparagraph\{Subparagraph Heading\} In order to avoid simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Use the \\LaTeX\\ automatism for all your cross-references and citations as has already been described in Sect.~\\ref\{sec:2\}, see also Fig.~\\ref\{fig:2\}.\par
+\par
+For unnumbered list we recommend to use the \\verb|itemize| environment -- it will automatically render Springer's preferred layout.\par
+\par
+\\begin\{itemize\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development, cf. Table~\\ref\{tab:1\}.\}\par
+\\begin\{itemize\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\end\{itemize\}\par
+\\item\{Livelihood and survival mobility are oftentimes coutcomes of uneven socioeconomic development.\}\par
+\\end\{itemize\}\par
+\par
+\\begin\{figure\}[t]\par
+\\sidecaption[t]\par
+% Use the relevant command for your figure-insertion program\par
+% to insert the figure file.\par
+% For example, with the option graphics use\par
+\\includegraphics[scale=.65]\{figure\}\par
+%\par
+% If no graphics program available, insert a blank space i.e. use\par
+%\\picplace\{5cm\}\{2cm\} % Give the correct figure height and width in cm\par
+%\par
+%\\caption\{Please write your figure caption here\}\par
+\\caption\{If the width of the figure is less than 7.8 cm use the \\texttt\{sidecapion\} command to flush the caption on the left side of the page. If the figure is positioned at the top of the page, align the sidecaption with the top of the figure -- to achieve this you simply need to use the optional argument \\texttt\{[t]\} with the \\texttt\{sidecaption\} command\}\par
+\\label\{fig:2\}       % Give a unique label\par
+\\end\{figure\}\par
+\par
+\\runinhead\{Run-in Heading Boldface Version\} Use the \\LaTeX\\ automatism for all your cross-references and citations as has already been described in Sect.~\\ref\{sec:2\}.\par
+\par
+\\subruninhead\{Run-in Heading Italic Version\} Use the \\LaTeX\\ automatism for all your cross-refer\\-ences and citations as has already been described in Sect.~\\ref\{sec:2\}\\index\{paragraph\}.\par
+% Use the \\index\{\} command to code your index words\par
+%\par
+% For tables use\par
+%\par
+\\begin\{table\}\par
+\\caption\{Please write your table caption here\}\par
+\\label\{tab:1\}       % Give a unique label\par
+%\par
+% Follow this input for your own table layout\par
+%\par
+\\begin\{tabular\}\{p\{2cm\}p\{2.4cm\}p\{2cm\}p\{4.9cm\}\}\par
+\\hline\\noalign\{\\smallskip\}\par
+Classes & Subclass & Length & Action Mechanism  \\\\\par
+\\noalign\{\\smallskip\}\\svhline\\noalign\{\\smallskip\}\par
+Translation & mRNA$^a$  & 22 (19--25) & Translation repression, mRNA cleavage\\\\\par
+Translation & mRNA cleavage & 21 & mRNA cleavage\\\\\par
+Translation & mRNA  & 21--22 & mRNA cleavage\\\\\par
+Translation & mRNA  & 24--26 & Histone and DNA Modification\\\\\par
+\\noalign\{\\smallskip\}\\hline\\noalign\{\\smallskip\}\par
+\\end\{tabular\}\par
+$^a$ Table foot note (with superscript)\par
+\\end\{table\}\par
+%\par
+\\section\{Section Heading\}\par
+\\label\{sec:3\}\par
+% Always give a unique label\par
+% and use \\ref\{<label>\} for cross-references\par
+% and \\cite\{<label>\} for bibliographic references\par
+% use \\sectionmark\{\}\par
+% to alter or adjust the section heading in the running head\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations as has already been described in\par
+Sect.~\\ref\{sec:2\}.\par
+\par
+Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+\par
+If you want to list definitions or the like we recommend to use the Springer-enhanced \\verb|description| environment -- it will automatically render Springer's preferred layout.\par
+\par
+\\begin\{description\}[Type 1]\par
+\\item[Type 1]\{That addresses central themes pertainng to migration, health, and disease. In Sect.~\\ref\{sec:1\}, Wilson discusses the role of human migration in infectious disease distributions and patterns.\}\par
+\\item[Type 2]\{That addresses central themes pertainng to migration, health, and disease. In Sect.~\\ref\{subsec:2\}, Wilson discusses the role of human migration in infectious disease distributions and patterns.\}\par
+\\end\{description\}\par
+\par
+\\subsection\{Subsection Heading\} %\par
+In order to avoid simply listing headings of different levels we recommend to let every heading be followed by at least a short passage of text. Use the \\LaTeX\\ automatism for all your cross-references and citations citations as has already been described in Sect.~\\ref\{sec:2\}.\par
+\par
+Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+\par
+\\begin\{svgraybox\}\par
+If you want to emphasize complete paragraphs of texts we recommend to use the newly defined Springer class option \\verb|graybox| and the newly defined environment \\verb|svgraybox|. This will produce a 15 percent screened box 'behind' your text.\par
+\par
+If you want to emphasize complete paragraphs of texts we recommend to use the newly defined Springer class option and environment \\verb|svgraybox|. This will produce a 15 percent screened box 'behind' your text.\par
+\\end\{svgraybox\}\par
+\par
+\par
+\\subsubsection\{Subsubsection Heading\}\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations as has already been described in\par
+Sect.~\\ref\{sec:2\}.\par
+\par
+Please note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+\par
+\\begin\{theorem\}\par
+Theorem text goes here.\par
+\\end\{theorem\}\par
+%\par
+% or\par
+%\par
+\\begin\{definition\}\par
+Definition text goes here.\par
+\\end\{definition\}\par
+\par
+\\begin\{proof\}\par
+%\\smartqed\par
+Proof text goes here.\par
+\\qed\par
+\\end\{proof\}\par
+\par
+\\paragraph\{Paragraph Heading\} %\par
+Instead of simply listing headings of different levels we recommend to\par
+let every heading be followed by at least a short passage of text.\par
+Further on please use the \\LaTeX\\ automatism for all your\par
+cross-references and citations as has already been described in\par
+Sect.~\\ref\{sec:2\}.\par
+\par
+Note that the first line of text that follows a heading is not indented, whereas the first lines of all subsequent paragraphs are.\par
+%\par
+% For built-in environments use\par
+%\par
+\\begin\{theorem\}\par
+Theorem text goes here.\par
+\\end\{theorem\}\par
+%\par
+\\begin\{definition\}\par
+Definition text goes here.\par
+\\end\{definition\}\par
+%\par
+\\begin\{proof\}\par
+\\smartqed\par
+Proof text goes here.\par
+\\qed\par
+\\end\{proof\}\par
+%\par
+\\begin\{acknowledgement\}\par
+If you want to include acknowledgments of assistance and the like at the end of an individual chapter please use the \\verb|acknowledgement| environment -- it will automatically render Springer's preferred layout.\par
+\\end\{acknowledgement\}\par
+%\par
+\\section*\{Appendix\}\par
+\\addcontentsline\{toc\}\{section\}\{Appendix\}\par
+%\par
+%\par
+When placed at the end of a chapter or contribution (as opposed to at the end of the book), the numbering of tables, figures, and equations in the appendix section continues on from that in the main text. Hence please \\textit\{do not\} use the \\verb|appendix| command when writing an appendix at the end of your chapter or contribution. If there is only one the appendix is designated ``Appendix'', or ``Appendix 1'', or ``Appendix 2'', etc. if there is more than one.\par
+\par
+\\begin\{equation\}\par
+a \\times b = c\par
+\\end\{equation\}\par
+\par
+\\input\{referenc\}\par
+\\end\{document\}\par
+}
+ 

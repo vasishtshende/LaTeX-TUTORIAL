@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LaTeX Tutorial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <style>
+  
+    div.console {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+    }	
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">LaTeX Tutorial</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav  ">
+        <li><a href="file:///E:/OST%20Project/OST_Tutorial.html">Home</a></li>
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tutorial <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="file:///E:/OST%20Project/Tutorial_basic.html">Basic</a></li>
+            <li><a href="#">My First Document</a></li>
+            <li><a href="#">Document Structure</a></li>
+            <li><a href="#">LaTeX packages</a></li>
+            <li><a href="#">Type Setting Math</a></li>
+            <li><a href="#">Scientific Notations</a></li>
+            <li><a href="#">Adding a Picture</a></li>
+            <li><a href="#">Generate Table of Contents</a></li>
+            <li><a href="#">Adding a Biblography</a></li>
+            <li><a href="#">Creating tables</a></li>
+            <li><a href="#">Plots</a></li>
+            <li><a href="#">Electric Circuits</a></li>
+            <li><a href="#">Creating Lists</a></li>
+            <li><a href="#">Other Formatting</a></li>
+          </ul>
+        </li>
+        <li><a href="file:///E:/OST%20Project/Examples.html"> Examples</a></li>
+        <li><a href="file:///E:/OST%20Project/Templates.html"> Templates </a></li>
+        <li><a href="file:///E:/OST%20Project/AboutUs.html"> About us </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/><br/><br/>
+<div class="col-md-2">
+ <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <li ><a href="#">Beginning With LaTeX</a></li>
+    <li><a href="#">My First Document</a></li>
+    <li><a href="#">Document Structure</a></li>
+    <li><a href="#">LaTeX packages</a></li>
+    <li><a href="#">Type Setting Math</a></li>
+    <li><a href="#">Scientific Notations</a></li>
+    <li class="active"><a href="#">Adding a Picture</a></li>
+    <li><a href="#">Generate Table of Contents</a></li>
+    <li><a href="#">Adding a Biblography</a></li>
+    <li><a href="#">Creating tables</a></li>
+    <li><a href="#">Plots</a></li>
+    <li><a href="#">Electric Circuits</a></li>
+    <li><a href="#">Creating Lists</a></li>
+    <li><a href="#">Other Formatting</a></li>
+  </ul>
+</div>
+<div class="col-md-9">
+<h1><font color="red">Adding figures in LaTeX </font> </h1>
+<h3><strong> Embed an image/picture </strong></h3>
+<br/>
+<p align="justify"><font face="verdana" size="3"> From time to time, it's necessary to add pictures to your documents. Using LaTeX all pictures will be 
+                                                  indexed automatically and tagged with successive numbers when using the <i>figure environment</i> and the 
+												  <i>graphicx package.</i>
+	</font> 
+</p>
+<div class="console">
+<p><font face="courier"><font color="red">\documentclass</font>{article}<br/>
+   <font color="red">\usepackage</font>{graphicx}</br>
+   <font color="red">\begin</font>{document}</br>
+   <font color="red">\begin</font>{figure}</br>
+   <font color="red">\includegraphics[width=\linewidth]</font>{boat.jpg}</br>
+   <font color="red">\caption</font>{A boat.}</br>
+   <font color="red">\label</font>{fig:boat1}</br>
+   <font color="red">\end</font>{figure}</br>
+   <font color="red">Figure \ref</font>{fig:boat1} shows a boat.</br>
+   <font color="red">\end</font>{document}</br>
+   </font> 
+</p>
+</div>
+
+<p align="justify"> <font face="verdana" size="3">The code above will create the following pdf:</font><br/><br/><br/></p>
+<img src="AddingPictures.jpg" width="486" height="409">
+<p align="justify">
+<font face="verdana" size="3">The <i>figure</i> environment takes care of the numbering and positioning of the image within the document. In order to 
+                              include a figure, you must use the <i>\includegraphics</i> command. It takes the image width as an option in brackets and the 
+							  path to your image file. As you can see, I put <i>\linewidth</i> into the brackets, which means the picture will be scaled to fit 
+							  the width of the document. As a result smaller pictures are upscaled and larger pictures downscaled respectively. As I 
+							  mentioned before the brackets contain the path to the image. In this case the image is stored in the same directory as 
+							  my .tex file, so I simply put <i>boat.jpg</i> here to include it. For large documents, you probably want to store image files 
+							  in a different folder, say we created a folder <i>images</i>, then we would simply write <i>images/boat.jpg</i> into the braces. 
+							  In the next command we set a <i>\caption</i>, which is the text shown below the image and a <i>\label</i> which is invisible,
+							  but useful if we want to refer to our figure in our document. You can use the <i>\ref</i> command to refer to the figure 
+							  (marked by label) in your text and it will then be replaced by the correct number. LaTeX is smart enough to 
+							  retrieve the correct numbers for all your images automatically. Note that you will need to include the <i>graphicx</i>
+							  package in order to use this code.
+</font>
+</p>
+<br/>
+<h1><strong><font color="red"> Force the picture to a certain position - Set the float</font></strong></h1>
+
+<p align="justify">
+<font face="verdana" size="3">At some point, you will notice that the figure doesn't necessarily show up in the exact place as you put your code
+ in the .tex file. If your document contains a lot of text, it's possible that LaTeX will put the picture on the next page, 
+ or any other page where it finds sufficient space. To prevent this behavior, it's necessary to set the float 
+ value for the figure environment.
+</font>
+</p>
+
+
+<div class="console">
+<p><font face="courier">
+   %...<br/>
+   <font color="red">\begin</font>{figure}[h!]<br/>
+   %...<br/>
+   </font> 
+</p>
+</div>
+<br/>
+<p align="justify">
+<font face="verdana" size="3">Setting the float by adding [h!] behind the figure environment \begin tag will force the figure to be shown at the 
+                              location in the document. Possible values are:
+</font>
+</p>
+<font face="verdana" size="3">
+<ul style="list-style-type:square">
+  <li>h (here) - same location</li>
+  <li>t (top) - top of page</li>
+  <li>b (bottom) - bottom of page</li>
+  <li>p (page) - on an extra page</li>
+  <li>! (override) - will force the specified location</li>
+</ul>
+</font>
+
+<p align="justify">
+<font face="verdana" size="3">However, These are the only used the [h!] option so far. The float package (\usepackage{float}) allows to set the option to [H], 
+                              which is even stricter than [h!].
+</font>
+</p>							  
+</div>
+</body>
+</html>

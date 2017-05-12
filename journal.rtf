@@ -1,0 +1,461 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang16393{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\\documentclass[times]\{oupau\}\par
+\par
+\\begin\{document\}\par
+\par
+% Enter full title and short title for running headers\par
+\\title\{A Demonstration of the \\LaTeXe\\ Class File for the \\textit\{Oxford University Press Ltd Journal\}\}\par
+\\shorttitle\{A Demonstration of the \\textit\{OUP Journal\} Class File\}\par
+\par
+% Enter the publication year and the ID number of the paper\par
+\\volumeyear\{2009\}\par
+\\paperID\{rnn999\}\par
+\par
+% Author name(s)\par
+\\author\{First Author\\affil\{1\} and Second Author\\affil\{2\}\}\par
+% Abbreviated author name for running headers\par
+\\abbrevauthor\{F. Author and S. Author\}\par
+% Abbreviated author name for first page header\par
+\\headabbrevauthor\{Author, F., and S. Author\}\par
+\par
+\\address\{%\par
+\\affilnum\{1\}Complete First Author Address\par
+and\par
+\\affilnum\{2\}Complete Second Author Address\}\par
+\par
+% Address / e-mail address of corresponding author\par
+\\correspdetails\{corr.email@math.edu\}\par
+\par
+% Received/revised/accepted dates will be entered by the publisher during production of an accepted paper. Please do not edit these placeholders for submission.\par
+\\received\{1 Month 20XX\}\par
+\\revised\{11 Month 20XX\}\par
+\\accepted\{21 Month 20XX\}\par
+\par
+% Enter details of editor communicating this article\par
+\\communicated\{A. Editor\}\par
+\par
+\\begin\{abstract\}\par
+This paper describes the use of the \\LaTeXe\\ \\textsf\{oupau.cls\} class file for\par
+setting papers for the \\textit\{Oxford University Press Ltd Journal\}.\par
+\\end\{abstract\}\par
+\par
+\\maketitle\par
+\par
+\\section\{Introduction\}\par
+\par
+Many authors submitting to journals now use \\LaTeXe\\ to prepare their papers.\par
+This paper describes the \\textsf\{oupau.cls\} class file that can be used to convert\par
+articles produced with other \\LaTeXe\\ class files into the correct form for\par
+publication in the \\textit\{Oxford University Press Ltd Journal\}.\par
+\par
+The \\textsf\{oupau.cls\} class file preserves much of the standard\par
+\\LaTeXe\\ interface so that any document that was produced using the\par
+standard \\LaTeXe\\ \\textsf\{article\} style can easily be converted to\par
+work with the \\textsf\{oupau\} style. However, the width of text and\par
+type size will vary from that of \\textsf\{article.cls\}; therefore,\par
+\\textit\{line breaks will change\} and it is likely that displayed\par
+mathematics and tabular material will need re-setting.\par
+\par
+In the following sections we describe how to lay out your code to use \\textsf\{oupau.cls\}\par
+to reproduce the \\textit\{article\}. However, this paper is not a guide to using\par
+\\LaTeXe\\ and we would refer you to any of the many books available\par
+(see, for example, \\cite\{Kopka_Daly:2003,Lamport:1994,Mittelbach_Goossens:2004\}).\par
+\par
+\par
+\\section\{The Three Golden Rules\}\par
+\par
+Before we proceed, we would like to stress \\textit\{three golden rules\} that need\par
+to be followed to enable the most efficient use of your code at the typesetting stage:\par
+\\begin\{itemize\}\par
+\\item[(i)]\par
+keep your own macros to an absolute minimum;\par
+\\item[(ii)]\par
+as \\TeX\\ is designed to make sensible spacing decisions by itself, do \\textit\{not\}\par
+use explicit horizontal or vertical spacing commands, except in a few accepted\par
+(mostly mathematical) situations, such as \\verb"\\," before a\par
+differential d, or \\verb"\\quad" to separate an equation from its qualifier.\par
+\\end\{itemize\}\par
+\par
+\par
+\\section\{Getting Started\}\par
+\par
+The \\textsf\{oupau\} class file should run on any standard \\LaTeXe\\ installation.\par
+If any of the fonts, class files or packages it requires are missing from your\par
+installation, they can be found on the \\textit\{\\TeX\}\\ \\textit\{Live\} CD-ROMs or from CTAN.\par
+\par
+The \\textit\{Journal\} is published using Times fonts and this is achieved by using\par
+the \\textsf\{times\} option as \\verb"\\documentclass[times]\{oupau\}". If for any reason\par
+you have a problem using Times you can easily resort to Computer Modern fonts by\par
+removing the \\textsf\{times\} option.\par
+\par
+\par
+\\section\{The Article Header Information\}\par
+\par
+The heading for any file using \\textsf\{oupau.cls\} is shown in\par
+Figure~\\ref\{figure: header text example\}.\par
+\par
+\\begin\{figure\}[h]\par
+\\centering\par
+\\begin\{minipage\}\{0.9\\textwidth\}\par
+\\begin\{verbatim\}\par
+\\documentclass[times]\{oupau\}\par
+%\\documentclass[times,doublespace]\{oupau\}%For paper submission\par
+\par
+\\begin\{document\}\par
+\par
+% Enter full title and short title for running headers\par
+\\title\{<Full paper title>\}\par
+\\shorttitle\{<Short paper title for running headers>\}\par
+\par
+% Author name(s)\par
+\\author\{<First Author>\\affil\{1\}, <Second Author>\\affil\{2\}, and <Third author>\\affil\{1\}\}\par
+% Abbreviated author name for running headers\par
+\\abbrevauthor\{<F. Author, S. Author, and T. Author>\}\par
+% Abbreviated author name for first page header\par
+\\headabbrevauthor\{<Author, F., S. Author, and T. Author>\}\par
+\par
+\\address\{%\par
+\\affilnum\{1\}<Address of first and third authors>\par
+and\par
+\\affilnum\{2\}<Address of second author>\}\par
+\par
+\\correspdetails\{<Corresponding author's address/e-mail address>\}\par
+\par
+\\received\{<Article history>\}\par
+%\\revised\{<As needed>\}\par
+%\\accepted\{<As needed>\}\par
+\par
+\\communicated\{<Editor communicating this article>\}\par
+\par
+\\begin\{abstract\}\par
+<Text of abstract>\par
+\\end\{abstract\}\par
+\par
+\\maketitle\par
+\par
+\\section\{Introduction\}\par
+...\par
+...\par
+\\end\{verbatim\}\par
+\\end\{minipage\}\par
+\\caption\{Example header text\}\par
+\\label\{figure: header text example\}\par
+\\end\{figure\}\par
+\par
+\par
+\\subsection\{Remarks\}\par
+\par
+\\begin\{itemize\}\par
+\\item[(i)] In \\verb"\\shorttitle", keep the short title to no more than 50 characters.\par
+\\item[(ii)] For the abbreviated author lists \\verb"\\abbrevauthor" (for the running headers)\par
+and \\verb"\\headabbrevauthor" (for the first page header), use `\\textit\{et al.\}'\par
+if there are three or more authors.\par
+\\item[(iii)] Note the use of \\verb"\\affil" and \\verb"\\affilnum" to link names and\par
+addresses. The address and/or email address of the author for\par
+correspondence is defined by \\verb"\\correspdetails".\par
+\\item[(iv)] For submitting a double-spaced manuscript, add \\textsf\{doublespace\}\par
+as an option to the \\textsf\{documentclass\} line.\par
+\\end\{itemize\}\par
+\par
+\par
+\\section\{The Body of the Article\}\par
+\par
+\\subsection\{Heading levels\}\par
+\par
+There are three main levels of heading: section, subsection\par
+and subsubsection, also known as A, B and C heads\par
+and generated by their corresponding \\LaTeX\\ commands, i.e. \\verb"\\section",\par
+\\verb"\\subsection" and \\verb"\\subsubsection". You may also need paragraph\par
+and subparagraph headings, but consider using a list environment for separating\par
+smaller amounts of material. Capitalize all main words (nouns, names, etc.) in\par
+the section headings, and only the first word (and any proper nouns of course)\par
+in subsection and all lower headings.\par
+\par
+\par
+\\subsection\{Lists\}\par
+\par
+Lists may be an appropriate alternative to using headings below the level\par
+of subsubsection. If the items in the list are complete or near complete sentences,\par
+they should each begin with capital letters and end with a full\par
+stop. If they are short phrases they should start with a lower case letter and\par
+end with a semicolon. Single items need no punctuation or capitals. The final item\par
+in any list should end with a full stop. If punctuation is used to introduce the\par
+list, use a colon.\par
+\par
+There are two main ways of presenting a list: numbered and unnumbered.\par
+\par
+\\subsubsection\{Numbered lists\}\par
+\par
+Use a numbered list if the order of the items is important, with either roman\par
+numerals or lower case letters, both in parentheses. This style helps distinguish\par
+such items from heading levels. Numbered lists can be created using the optional\par
+argument in square brackets for \\verb"\\item":\par
+\\begin\{verbatim\}\par
+\\begin\{itemize\}\par
+\\item[(i)]\par
+...\par
+\\item[(ii)]\par
+...\par
+\\item[(iii)]\par
+...\par
+\\item[(iv)]\par
+...\par
+\\item[(v)]\par
+...\par
+\\end\{itemize\}\par
+\\end\{verbatim\}\par
+\par
+If the order of the list is unimportant, use a bulleted list, which is similar\par
+to the above example, except here there is no need for the optional argument in\par
+square brackets:\par
+\\begin\{verbatim\}\par
+\\begin\{itemize\}\par
+\\item\par
+...\par
+\\item\par
+...\par
+\\item\par
+...\par
+\\item\par
+...\par
+\\item\par
+...\par
+\\end\{itemize\}\par
+\\end\{verbatim\}\par
+Where necessary, lists may be nested, i.e. use an itemize environment within\par
+another itemize environment, as follows:\par
+\\begin\{itemize\}\par
+\\item[(1)]\par
+...\par
+\\begin\{itemize\}\par
+\\item[(a)]\par
+...\par
+\\item[(b)]\par
+...\par
+\\end\{itemize\}\par
+\\item[(2)]\par
+...\par
+\\end\{itemize\}\par
+\par
+\par
+\\subsection\{Theorem-like environments\}\par
+\par
+These are set as follows:\par
+\\begin\{theorem\}\par
+\\label\{thm1\}\par
+If B equals the Lebesgue measure, then for any measurable function,\par
+$\\psi : R_+ \\to  R$, $E_\{\\psi\} \\left( Q(0) \\right) =\par
+\\left( 1 - a \\right) \\psi (0)$, with the understanding that the fraction in the\par
+right-hand side equals $\\psi (Q(0))$ on the event\par
+$\\left\\\{ Q(0) = Q.(0) \\right\\\}$.\par
+\\end\{theorem\}\par
+\par
+This formatting is achieved using\par
+\\begin\{verbatim\}\par
+\\begin\{theorem\}\par
+\\label\{thm1\}\par
+...\par
+\\end\{theorem\}\par
+\\end\{verbatim\}\par
+Note the use of the \\LaTeX\\ \\verb"\\label" command. References to this theorem\par
+will then take the form, \\verb"Theorem~\\ref\{thm1\}", and will be automatically\par
+renumbered if the order changes.\par
+\par
+For definitions, examples, etc., again use the corresponding \\LaTeX\\ environment\par
+(i.e. \\verb"\\begin\{definition\}...\\end\{definition\}", etc.). Proofs are set in a similar way:\par
+\\begin\{verbatim\}\par
+\\begin\{proof\}\par
+...\par
+\\end\{proof\}\par
+\\end\{verbatim\}\par
+For example:\par
+\\begin\{proof\}\par
+Use $K_\{\\lambda\} > S_\{\\lambda\}$ to translate combinators into $\\lambda$ terms.\par
+For the converse, translate $\\lambda x \\ldots$ by $[x < y] \\ldots$\par
+and use induction and the lemma.\par
+\\end\{proof\}\par
+\par
+\par
+\\subsection\{Mathematics\}\par
+\par
+\\textsf\{oupau.cls\} makes the full functionality of \\AmSTeX\\ available. We encourage\par
+the use of the \\textsf\{align\}, \\textsf\{gather\} and \\textsf\{multline\} environments\par
+for displayed mathematics.\par
+\par
+\par
+\\subsection\{Figures and tables\}\par
+\par
+\\textsf\{oupau.cls\} uses the \\textsf\{graphicx\} package for handling figures.\par
+\par
+Figures are called in as follows:\par
+\\begin\{verbatim\}\par
+\\begin\{figure\}\par
+\\centering\par
+\\includegraphics\{<figure name>\}\par
+\\caption\{<Figure caption>\}\par
+\\label\{<Figure label>\}\par
+\\end\{figure\}\par
+\\end\{verbatim\}\par
+\par
+For further details on how to size figures, etc., with the \\textsf\{graphicx\} package\par
+see, for example, \\cite\{Kopka_Daly:2003,Mittelbach_Goossens:2004\}. If figures are\par
+available in an acceptable format (for example, .eps, .ps) then they will be used\par
+but a printed version should always be provided.\par
+\par
+The standard coding for a table is shown in Figure~\\ref\{figure: table example\}.\par
+\par
+\\begin\{figure\}[h]\par
+\\centering\par
+\\begin\{minipage\}\{0.8\\textwidth\}\par
+\\begin\{verbatim\}\par
+\\begin\{table\}\par
+\\caption\{<Table caption>\}\par
+\\label\{<Table label>\}\par
+\\centering\par
+\\begin\{tabsize\}\par
+\\begin\{tabular\}\{<table alignment>\}\par
+\\toprule\par
+<column headings>\\\\\par
+\\midrule\par
+<table entries\par
+(separated by & as usual)>\\\\\par
+<table entries>\\\\\par
+.\par
+.\par
+.\\\\\par
+\\bottomrule\par
+\\end\{tabular\}\par
+\\end\{tabsize\}\par
+\\end\{table\}\par
+\\end\{verbatim\}\par
+\\end\{minipage\}\par
+\\caption\{Example table layout\}\par
+\\label\{figure: table example\}\par
+\\end\{figure\}\par
+\par
+\par
+\\subsection\{Quotes and block quotes\}\par
+\par
+\\begin\{itemize\}\par
+\\item\par
+Use double quotes. Do not use single quotes, except for ``quotes `within' quotes''.\par
+\\item\par
+Use the following style for block quotes. Do not use quote marks.\par
+\\end\{itemize\}\par
+\par
+\\begin\{quote\}\par
+Use for quotes that are more than about four lines in length. Indent from both\par
+margins. For direct quotes reproduce the exact spelling and punctuation of the\par
+original. Any interpolations should be enclosed in square brackets. Do not forget to\par
+acknowledge the source of your quote and seek permission if necessary.\par
+(See Permissions.)\par
+\\end\{quote\}\par
+\par
+This is produced by\par
+\\begin\{verbatim\}\par
+\\begin\{quote\}\par
+...\par
+\\end\{quote\}\par
+\\end\{verbatim\}\par
+The quote is set in the same font size as the rest of the text and one line\par
+of space is left above and below.\par
+\par
+\par
+\\subsection\{Cross-referencing\}\par
+\par
+The use of the \\LaTeX\\ cross-reference system for figures, tables, equations,\par
+etc., is encouraged (using \\verb"\\ref\{<name>\}" and \\verb"\\label\{<name>\}").\par
+\par
+\par
+\\subsection\{Acknowledgements\}\par
+\par
+An acknowledgements section is started with \\verb"\\ack" or \\verb"\\acks"\par
+for \\textit\{Acknowledgement\} or \\textit\{Acknowledgements\}, respectively. It\par
+must be placed just before the references (or before the appendix when applicable).\par
+\par
+\par
+\\subsection\{Bibliography\}\par
+\par
+The package \\textsf\{natbib\} is loaded by \\textsf\{oupau.cls\} and can be\par
+used to achieve either of the following reference citations. Further details\par
+can be found in the notes accompanying the \\textsf\{natbib\} package.\par
+\par
+\\subsubsection\{Numbered references\}\par
+\par
+The commands for producing the reference list are:\par
+\\begin\{verbatim\}\par
+\\begin\{thebibliography\}\{00\}\par
+\\bibitem\{<bibid1>\} <Reference details>\par
+.\par
+.\par
+.\par
+\\bibitem\{<bibid20>\} <Reference details>\par
+\\end\{thebibliography\}\par
+\\end\{verbatim\}\par
+and the first reference above can be referred to in the text using\par
+\\verb"\\cite\{<bibid1>\}".\par
+\par
+This is a citation of reference \\cite\{Abe:2008\} in the text and the\par
+following commands form part of the output that occurs at the end of this document:\par
+\\begin\{verbatim\}\par
+\\begin\{thebibliography\}\{0\}\par
+\\bibitem\{Abe:2008\}\par
+Abe, T.\par
+``Degeneration of the strange duality map for symplectic bundles.''\par
+\\textit\{Journal of Mathematics\} 56, no. 5 (2008): 5--10.\par
+\\end\{thebibliography\}\par
+\\end\{verbatim\}\par
+\par
+\\subsubsection\{Name/date references\}\par
+\par
+The commands for producing the reference list are:\par
+\\begin\{verbatim\}\par
+\\begin\{thebibliography\}\{0\}\par
+\\bibitem[\\protect\\citeauthoryear\{<complete author list>\}\par
+\{<first author et al.>\}\{<year>\}]\{<bibid1>\}\par
+<Reference details>\par
+.\par
+.\par
+.\par
+\\bibitem[\\protect\\citeauthoryear\{<complete author list>\}\par
+\{<first author et al.>\}\{<year>\}]\{<bibid20>\}\par
+<Reference details>\par
+\\end\{thebibliography\}\par
+\\end\{verbatim\}\par
+and these reference can be referred to in the text using\par
+\\verb"\\cite\{<bibid1>\}", \\verb"\\citet\{<bibid20>\}", etc.\par
+\par
+\par
+\\subsection\{Double spacing\}\par
+\par
+If you need to double space your document for submission please use the\par
+\\textsf\{doublespace\} option as shown in the sample layout in\par
+Figure \\ref\{figure: header text example\}.\par
+\par
+\par
+\\begin\{thebibliography\}\{0\}\par
+\\bibitem\{Abe:2008\}\par
+Abe, T.\par
+``Degeneration of the strange duality map for symplectic bundles.''\par
+\\textit\{Journal of Mathematics\} 56, no. 5 (2008): 5--10.\par
+\par
+\\bibitem\{Kopka_Daly:2003\}\par
+Kopka, H., and P. W. Daly.\par
+\\textit\{A Guide to \\LaTeX\\ \}, 4th ed.\par
+New York: Addison-Wesley, 2003.\par
+\par
+\\bibitem\{Lamport:1994\}\par
+Lamport, L.\par
+\\textit\{\\LaTeX\\ : A Document Preparation System\}, 2nd ed.\par
+New York: Addison-Wesley, 1994.\par
+\par
+\\bibitem\{Mittelbach_Goossens:2004\}\par
+Mittelbach, F., and M. Goossens.\par
+\\textit\{The \\LaTeX\\ Companion\}, 2nd ed.\par
+New York: Addison-Wesley, 2004.\par
+\\end\{thebibliography\}\par
+\par
+\\end\{document\}\par
+}
+ 
